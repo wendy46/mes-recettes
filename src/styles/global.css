@@ -7,10 +7,10 @@
   --color-text: #3a3129;
   --color-text-muted: #7a6f60;
 
-  /* Warm terracotta accent */
-  --color-accent: #c2622c;
-  --color-accent-dark: #9c4a1f;
-  --color-accent-soft: #f6ddc4;
+  /* Vivid coral-pink accent */
+  --color-accent: #ff3b5c;
+  --color-accent-dark: #d91e45;
+  --color-accent-soft: #fff2f4;
 
   /* Near-black ink, used for the "filled dark" pill/button treatment */
   --color-ink: #2a2420;
