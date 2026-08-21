@@ -24,11 +24,11 @@ const imgSrc = getRecipeImage(recipe.slug, category, image);
   </div>
   <div class="recipe-card-body">
     <h3>{title}</h3>
-    {(prep_time || cook_time || servings) && (
+    {(servings || prep_time || cook_time) && (
       <div class="recipe-card-meta">
+        {servings && <span>Pour {servings}</span>}
         {prep_time && <span>Préparation : {prep_time}</span>}
         {cook_time && <span>Cuisson : {cook_time}</span>}
-        {!prep_time && !cook_time && servings && <span>Pour {servings}</span>}
       </div>
     )}
     <span class="btn btn-dark recipe-card-cta">

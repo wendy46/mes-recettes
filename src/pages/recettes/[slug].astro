@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { recipe } = Astro.props;
-const { title, category, servings, prep_time, cook_time, notes, ingredients, steps, image } = recipe.data;
+const { title, category, servings, prep_time, cook_time, ingredients, steps, image } = recipe.data;
 const imgSrc = getRecipeImage(recipe.slug, category, image);
 ---
 
@@ -24,7 +24,7 @@ const imgSrc = getRecipeImage(recipe.slug, category, image);
   </div>
 
   <header class="recipe-detail-header">
-    <span class="badge">{category}</span>
+    <p class="recipe-eyebrow">{category}</p>
     <h1>{title}</h1>
     <div class="recipe-badges">
       {servings && <span class="badge badge-outline">Pour {servings}</span>}
@@ -50,12 +50,6 @@ const imgSrc = getRecipeImage(recipe.slug, category, image);
           <li>{step}</li>
         ))}
       </ol>
-
-      {notes && (
-        <div class="notes-box">
-          <strong>Notes :</strong> {notes}
-        </div>
-      )}
     </section>
   </div>
 </BaseLayout>
