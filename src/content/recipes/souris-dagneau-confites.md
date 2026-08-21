@@ -14,9 +14,13 @@ ingredients:
 - 1 tablette de bouillon de boeuf
 - 2 cas de miel
 - 3 cas d’huile d’olive
-- 1/2 bouquet de coriandresel, poivre SAUCE
+- 1/2 bouquet de coriandre
+- sel, poivre
+- SAUCE
 - 400 gr de graines de couscous moyen
-- 1 poignée de pignons de pinbeurrefeuilles de coriandre fraîche
+- 1 poignée de pignons de pin
+- beurre
+- feuilles de coriandre fraîche
 steps:
 - Préparer le bouillon en diluant la tablette dans 50 cl d’eau bouillante.
 - Faire chauffer l’huile d’olive dans une cocotte en fonte, et faire revenir les souris sur toutes leurs faces jusqu’à ce quelles soient bien dorées.

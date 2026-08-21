@@ -5,7 +5,12 @@ date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Marie | Note : 5/5 | 25 min | Temps de repos : 3 jours'
 ingredients:
-- 1 morceau de saumon de 800g 200g de gros sel gris 200g de cassonade 2 citrons bio ½ botte d’aneth 3 c.à soupe rases de thé earl grey
+- 1 morceau de saumon de 800g
+- 200g de gros sel gris
+- 200g de cassonade
+- 2 citrons bio
+- ½ botte d’aneth
+- 3 c.à soupe rases de thé earl grey
 steps:
 - Retirez les arêtes du poisson. Prélevez le zeste de citron à l’aide d’une râpe fine. Prélevez les feuilles d’aneth (gardez-en un peu pour servir).
 - Mélangez le sel, la cassonade, le zeste de citron, l’aneth et le thé.

@@ -13,7 +13,11 @@ ingredients:
 - 1 litre de base de sauce tomate – ou mix de 2 sauces tomates pour pâtes (aux tomates cerises, basilic…)
 - 1 pack de lasagnes
 - 250g de burrata
-- 150g parmesan râpéune grosse poignée de roquettegros selpoivre noirbasilic frais
+- 150g parmesan râpé
+- une grosse poignée de roquette
+- gros sel
+- poivre noir
+- basilic frais
 steps:
 - Préchauffez le four à 1
 - Faites chauffer une grande poêle ou cocotte, ajoutez un filet d’huile d’olive.

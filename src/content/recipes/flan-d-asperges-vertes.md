@@ -11,7 +11,8 @@ ingredients:
 - 6 œufs
 - 100 g de parmesan râpé
 - 20 g de beurre demi-sel
-- 3 cl de crème fleurettesel, poivre
+- 3 cl de crème fleurette
+- sel, poivre
 steps:
 - Coupez, lavez et réservez des pointes d'asperges. Faites cuire à la vapeur (ou à l'eau bouillante salée au gros sel) 3 à 4 minutes. Puis plongez-les dans une eau glacée et égouttez.
 - Faites chauffer le beurre dans une poêle, faites-y revenir les asperges puis passer au mixer.

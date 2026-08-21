@@ -7,8 +7,11 @@ notes: 'Source : Maman | Note : 4/5 | 45 min'
 ingredients:
 - 2 boites de tomates concassées
 - 3 steaks hachés
-- 2 oignons 1 pack de lasagnes
-- 150g parmesan râpépoivre noirbasilic frais
+- 2 oignons
+- 1 pack de lasagnes
+- 150g parmesan râpé
+- poivre noir
+- basilic frais
 steps:
 - Faire revenir les oignons.
 - Faire revenir la viande dans un peu d’huile. Laisser griller un peu la viande. Mélanger les oignons et la viande.

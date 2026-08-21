@@ -5,9 +5,12 @@ date_added: '2026-08-18'
 servings: 10 personnes
 notes: 'Source : Brubru | Note : 4/5 | 30 min | Temps de repos : 12 h'
 ingredients:
-- 2 paquets de boudoirs 6 gros oeufs
-- 500g de mascarponeenviron 70g de sucre (plus ou moins en fonction des goûts)
-- Cafévan houten
+- 2 paquets de boudoirs
+- 6 gros oeufs
+- 500g de mascarpone
+- environ 70g de sucre (plus ou moins en fonction des goûts)
+- Café
+- van houten
 steps:
 - Séparer les blancs des jaunes.
 - Faire blanchir les jaunes avec le sucre puis ajouter le mascarpone. Mélanger jusqu'à obtenir une crème bien lisse.

@@ -7,8 +7,12 @@ notes: 'Note : 3/5 | 10 min'
 ingredients:
 - huile d’olive
 - 2 gousses d’ail
-- 1 paquet de tagliatelles de courgettes fraîchestomates cerisesbasilic frais
-- 1 tranche d’ananas fraisselpoivre noir
+- 1 paquet de tagliatelles de courgettes fraîches
+- tomates cerises
+- basilic frais
+- 1 tranche d’ananas frais
+- sel
+- poivre noir
 steps:
 - Faire revenir les tomates cerises coupées en morceaux avec les gousses d’ail écrasées. Enlevez l’excédent de jus.
 - Rajoutez les tagliatelles de courgette – 2 min.

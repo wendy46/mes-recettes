@@ -7,7 +7,9 @@ prep_time: 10 min
 cook_time: 20 min
 notes: 'Source : Marie | Note : 4/5'
 ingredients:
-- 1 filet de saumon label rouge 1kg 8004 cas de pesto aux tomates séchées 300g de fromage Petit Billy
+- 1 filet de saumon label rouge 1kg 800
+- 4 cas de pesto aux tomates séchées
+- 300g de fromage Petit Billy
 - 50g de parmesan râpé
 - 50g de mie de pain rassie
 - ½ citron
