@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { ICONS } from "../lib/icons";
 
 interface Props {
   title: string;
@@ -26,17 +27,26 @@ function isActive(href: string) {
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
-        <a href="/" class="site-title">Mes Recettes</a>
+      <div class="container header-inner">
+        <a href="/" class="site-title">
+          <span class="site-title-word-1">Mes</span><span class="site-title-word-2">Recettes</span>
+        </a>
         <nav class="site-nav" aria-label="Navigation principale">
           <a href="/" class={isActive("/") ? "active" : ""}>Accueil</a>
           <a href="/recettes/" class={isActive("/recettes/") ? "active" : ""}>Toutes les recettes</a>
         </nav>
+        <form class="nav-search" action="/recettes/" method="get" role="search">
+          <span class="nav-search-icon" set:html={ICONS.search} />
+          <label for="nav-search-input" class="visually-hidden">Rechercher une recette</label>
+          <input id="nav-search-input" name="q" type="search" placeholder="Rechercher…" autocomplete="off" />
+        </form>
       </div>
     </header>
     <main>
       <div class="container">
-        <slot />
+        <div class="page-shell">
+          <slot />
+        </div>
       </div>
     </main>
     <footer class="site-footer">

@@ -1,0 +1,26 @@
+---
+import { ICONS } from "../lib/icons";
+
+const categories = [
+  { key: "all", label: "Toutes", icon: ICONS.all },
+  { key: "Entrées", label: "Entrées", icon: ICONS.entrees },
+  { key: "Tartes & Salades", label: "Tartes & Salades", icon: ICONS.tartesSalades },
+  { key: "Plats", label: "Plats", icon: ICONS.plats },
+  { key: "Desserts", label: "Desserts", icon: ICONS.desserts },
+  { key: "Préparations", label: "Préparations", icon: ICONS.preparations },
+];
+---
+
+<div class="category-pills" role="group" aria-label="Filtrer par catégorie">
+  {categories.map((cat) => (
+    <button
+      type="button"
+      class={`pill ${cat.key === "all" ? "active" : ""}`}
+      data-category-pill={cat.key}
+      aria-pressed={cat.key === "all" ? "true" : "false"}
+    >
+      <span class="pill-icon" set:html={cat.icon} />
+      <span>{cat.label}</span>
+    </button>
+  ))}
+</div>

@@ -1,30 +1,62 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import RecipeCard from "../components/RecipeCard.astro";
+import { getRecipeImage } from "../utils/images";
+import { ICONS } from "../lib/icons";
 
 const recipes = await getCollection("recipes");
-const featured = recipes.reduce((latest, current) =>
-  current.data.date_added > latest.data.date_added ? current : latest
+const byDateDesc = [...recipes].sort(
+  (a, b) => b.data.date_added.valueOf() - a.data.date_added.valueOf()
 );
-const { title, category, servings, prep_time, cook_time } = featured.data;
+
+const featured = byDateDesc[0];
+const teasers = byDateDesc.slice(1, 4);
+
+const { title, category, servings, prep_time, cook_time, image } = featured.data;
+const featuredImage = getRecipeImage(featured.slug, category, image);
 ---
 
 <BaseLayout title="Mes Recettes — Accueil">
   <section class="hero">
-    <p class="hero-eyebrow">Dernière recette ajoutée</p>
-    <div class="featured-card">
-      <span class="badge">{category}</span>
-      <h2>{title}</h2>
-      <div class="featured-meta">
-        {servings && <span class="badge badge-outline">Pour {servings}</span>}
-        {prep_time && <span class="badge badge-outline">Préparation : {prep_time}</span>}
-        {cook_time && <span class="badge badge-outline">Cuisson : {cook_time}</span>}
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Nouveauté</p>
+        <h1 class="hero-title"><span class="accent-text">Découvrez</span> nos recettes maison</h1>
+        <p class="hero-subtitle">
+          La dernière recette ajoutée à la collection&nbsp;: <strong>{title}</strong>.
+        </p>
+        <div class="hero-meta">
+          {servings && <span class="badge badge-outline">Pour {servings}</span>}
+          {prep_time && <span class="badge badge-outline">Préparation : {prep_time}</span>}
+          {cook_time && <span class="badge badge-outline">Cuisson : {cook_time}</span>}
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href={`/recettes/${featured.slug}/`}>
+            Voir la recette
+            <span class="icon" set:html={ICONS.arrowRight} />
+          </a>
+          <a class="btn btn-secondary" href="/recettes/">Toutes les recettes</a>
+        </div>
       </div>
-      <a class="btn btn-primary" href={`/recettes/${featured.slug}/`}>Voir la recette</a>
+      <a class="hero-media" href={`/recettes/${featured.slug}/`} aria-label={`Voir la recette ${title}`}>
+        <img src={featuredImage} alt={title} />
+        <span class="badge hero-media-badge">{category}</span>
+      </a>
     </div>
   </section>
 
-  <div class="home-secondary">
-    <a class="btn btn-secondary" href="/recettes/">Voir toutes les recettes</a>
-  </div>
+  {teasers.length > 0 && (
+    <section class="home-teasers">
+      <h2>À découvrir aussi</h2>
+      <div class="recipe-grid">
+        {teasers.map((recipe) => (
+          <RecipeCard recipe={recipe} />
+        ))}
+      </div>
+      <div class="home-secondary">
+        <a class="btn btn-secondary" href="/recettes/">Voir toutes les recettes</a>
+      </div>
+    </section>
+  )}
 </BaseLayout>

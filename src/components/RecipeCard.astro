@@ -1,21 +1,39 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { getRecipeImage } from "../utils/images";
+import { ICONS } from "../lib/icons";
 
 interface Props {
   recipe: CollectionEntry<"recipes">;
 }
 
 const { recipe } = Astro.props;
-const { title, category, prep_time, cook_time } = recipe.data;
+const { title, category, servings, prep_time, cook_time, image } = recipe.data;
+const imgSrc = getRecipeImage(recipe.slug, category, image);
 ---
 
-<a class="recipe-card" href={`/recettes/${recipe.slug}/`} data-title={title.toLowerCase()}>
-  <span class="badge">{category}</span>
-  <h3>{title}</h3>
-  {(prep_time || cook_time) && (
-    <div class="recipe-card-meta">
-      {prep_time && <span>Préparation : {prep_time}</span>}
-      {cook_time && <span>Cuisson : {cook_time}</span>}
-    </div>
-  )}
+<a
+  class="recipe-card"
+  href={`/recettes/${recipe.slug}/`}
+  data-title={title.toLowerCase()}
+  data-category={category}
+>
+  <div class="recipe-card-media">
+    <img src={imgSrc} alt={title} loading="lazy" />
+    <span class="badge recipe-card-badge">{category}</span>
+  </div>
+  <div class="recipe-card-body">
+    <h3>{title}</h3>
+    {(prep_time || cook_time || servings) && (
+      <div class="recipe-card-meta">
+        {prep_time && <span>Préparation : {prep_time}</span>}
+        {cook_time && <span>Cuisson : {cook_time}</span>}
+        {!prep_time && !cook_time && servings && <span>Pour {servings}</span>}
+      </div>
+    )}
+    <span class="btn btn-dark recipe-card-cta">
+      Voir la recette
+      <span class="icon" set:html={ICONS.arrowRight} />
+    </span>
+  </div>
 </a>

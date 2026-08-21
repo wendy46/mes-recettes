@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getRecipeImage } from "../../utils/images";
 
 export async function getStaticPaths() {
   const recipes = await getCollection("recipes");
@@ -11,11 +12,16 @@ export async function getStaticPaths() {
 }
 
 const { recipe } = Astro.props;
-const { title, category, servings, prep_time, cook_time, notes, ingredients, steps } = recipe.data;
+const { title, category, servings, prep_time, cook_time, notes, ingredients, steps, image } = recipe.data;
+const imgSrc = getRecipeImage(recipe.slug, category, image);
 ---
 
 <BaseLayout title={`${title} — Mes Recettes`}>
   <a class="back-link" href="/recettes/">&larr; Retour à toutes les recettes</a>
+
+  <div class="recipe-banner">
+    <img src={imgSrc} alt={title} />
+  </div>
 
   <header class="recipe-detail-header">
     <span class="badge">{category}</span>

@@ -9,6 +9,7 @@ const recipes = defineCollection({
     prep_time: z.string().optional(),
     cook_time: z.string().optional(),
     notes: z.string().optional(),
+    image: z.string().optional(),
     ingredients: z.array(z.string()),
     steps: z.array(z.string()),
     date_added: z.coerce.date(),
