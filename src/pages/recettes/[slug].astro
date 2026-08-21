@@ -1,0 +1,55 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const recipes = await getCollection("recipes");
+  return recipes.map((recipe) => ({
+    params: { slug: recipe.slug },
+    props: { recipe },
+  }));
+}
+
+const { recipe } = Astro.props;
+const { title, category, servings, prep_time, cook_time, notes, ingredients, steps } = recipe.data;
+---
+
+<BaseLayout title={`${title} — Mes Recettes`}>
+  <a class="back-link" href="/recettes/">&larr; Retour à toutes les recettes</a>
+
+  <header class="recipe-detail-header">
+    <span class="badge">{category}</span>
+    <h1>{title}</h1>
+    <div class="recipe-badges">
+      {servings && <span class="badge badge-outline">Pour {servings}</span>}
+      {prep_time && <span class="badge badge-outline">Préparation : {prep_time}</span>}
+      {cook_time && <span class="badge badge-outline">Cuisson : {cook_time}</span>}
+    </div>
+  </header>
+
+  <div class="recipe-body">
+    <section class="recipe-section" aria-labelledby="ingredients-heading">
+      <h2 id="ingredients-heading">Ingrédients</h2>
+      <ul class="ingredients-list">
+        {ingredients.map((ingredient) => (
+          <li>{ingredient}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="recipe-section" aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Préparation</h2>
+      <ol class="steps-list">
+        {steps.map((step) => (
+          <li>{step}</li>
+        ))}
+      </ol>
+
+      {notes && (
+        <div class="notes-box">
+          <strong>Notes :</strong> {notes}
+        </div>
+      )}
+    </section>
+  </div>
+</BaseLayout>

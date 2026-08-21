@@ -1,0 +1,48 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Mes recettes de cuisine, faites maison." } = Astro.props;
+const pathname = Astro.url.pathname;
+
+function isActive(href: string) {
+  if (href === "/") return pathname === "/";
+  return pathname.startsWith(href);
+}
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="site-title">Mes Recettes</a>
+        <nav class="site-nav" aria-label="Navigation principale">
+          <a href="/" class={isActive("/") ? "active" : ""}>Accueil</a>
+          <a href="/recettes/" class={isActive("/recettes/") ? "active" : ""}>Toutes les recettes</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>Fait avec amour, une recette à la fois.</p>
+      </div>
+    </footer>
+  </body>
+</html>

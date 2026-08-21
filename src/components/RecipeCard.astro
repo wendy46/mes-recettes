@@ -1,0 +1,21 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  recipe: CollectionEntry<"recipes">;
+}
+
+const { recipe } = Astro.props;
+const { title, category, prep_time, cook_time } = recipe.data;
+---
+
+<a class="recipe-card" href={`/recettes/${recipe.slug}/`} data-title={title.toLowerCase()}>
+  <span class="badge">{category}</span>
+  <h3>{title}</h3>
+  {(prep_time || cook_time) && (
+    <div class="recipe-card-meta">
+      {prep_time && <span>Préparation : {prep_time}</span>}
+      {cook_time && <span>Cuisson : {cook_time}</span>}
+    </div>
+  )}
+</a>

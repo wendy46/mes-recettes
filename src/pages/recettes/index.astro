@@ -1,0 +1,91 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import RecipeCard from "../../components/RecipeCard.astro";
+
+const recipes = await getCollection("recipes");
+
+const categoryOrder = ["Entrées", "Tartes & Salades", "Plats", "Desserts", "Préparations"];
+
+const grouped = categoryOrder
+  .map((category) => ({
+    category,
+    items: recipes
+      .filter((r) => r.data.category === category)
+      .sort((a, b) => a.data.title.localeCompare(b.data.title, "fr")),
+  }))
+  .filter((group) => group.items.length > 0);
+---
+
+<BaseLayout title="Toutes les recettes — Mes Recettes">
+  <h1>Toutes les recettes</h1>
+  <p>{recipes.length} recettes au total. Cherchez par nom pour trouver la vôtre.</p>
+
+  <div class="search-wrap">
+    <label for="recipe-search" class="visually-hidden">Rechercher une recette</label>
+    <input
+      id="recipe-search"
+      class="search-input"
+      type="search"
+      placeholder="Rechercher une recette par son nom…"
+      autocomplete="off"
+    />
+  </div>
+
+  <p class="search-empty" id="search-empty">Aucune recette ne correspond à votre recherche.</p>
+
+  <div id="recipe-groups">
+    {grouped.map((group) => (
+      <section class="category-section" data-category-section>
+        <h2 class="category-title">{group.category}</h2>
+        <div class="recipe-grid">
+          {group.items.map((recipe) => (
+            <RecipeCard recipe={recipe} />
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+</style>
+
+<script>
+  const input = document.getElementById("recipe-search") as HTMLInputElement | null;
+  const emptyMessage = document.getElementById("search-empty");
+  const sections = Array.from(document.querySelectorAll<HTMLElement>("[data-category-section]"));
+
+  if (input) {
+    input.addEventListener("input", () => {
+      const query = input.value.trim().toLowerCase();
+      let totalVisible = 0;
+
+      sections.forEach((section) => {
+        const cards = Array.from(section.querySelectorAll<HTMLElement>(".recipe-card"));
+        let visibleInSection = 0;
+
+        cards.forEach((card) => {
+          const title = card.dataset.title || "";
+          const matches = title.includes(query);
+          card.style.display = matches ? "" : "none";
+          if (matches) visibleInSection++;
+        });
+
+        section.style.display = visibleInSection > 0 ? "" : "none";
+        totalVisible += visibleInSection;
+      });
+
+      if (emptyMessage) {
+        emptyMessage.style.display = totalVisible === 0 ? "block" : "none";
+      }
+    });
+  }
+</script>

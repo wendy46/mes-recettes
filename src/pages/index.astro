@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const recipes = await getCollection("recipes");
+const featured = recipes.reduce((latest, current) =>
+  current.data.date_added > latest.data.date_added ? current : latest
+);
+const { title, category, servings, prep_time, cook_time } = featured.data;
+---
+
+<BaseLayout title="Mes Recettes — Accueil">
+  <section class="hero">
+    <p class="hero-eyebrow">Dernière recette ajoutée</p>
+    <div class="featured-card">
+      <span class="badge">{category}</span>
+      <h2>{title}</h2>
+      <div class="featured-meta">
+        {servings && <span class="badge badge-outline">Pour {servings}</span>}
+        {prep_time && <span class="badge badge-outline">Préparation : {prep_time}</span>}
+        {cook_time && <span class="badge badge-outline">Cuisson : {cook_time}</span>}
+      </div>
+      <a class="btn btn-primary" href={`/recettes/${featured.slug}/`}>Voir la recette</a>
+    </div>
+  </section>
+
+  <div class="home-secondary">
+    <a class="btn btn-secondary" href="/recettes/">Voir toutes les recettes</a>
+  </div>
+</BaseLayout>
