@@ -1,6 +1,6 @@
 ---
 title: Foie Gras
-category: Préparations
+category: Entrées
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Maman | Note : 4/5 | 25 min | Temps de repos : 3 jours'
