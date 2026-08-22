@@ -895,7 +895,9 @@ main {
     /* Screen sizing (rem/vw/clamp) reads much larger on a printed page
        than on a browser viewport — fix an absolute, print-appropriate
        base size here instead, without touching any on-screen size. */
-    font-size: 11pt;
+    /* Reduced another 65% on top of the earlier print-only sizing, per
+       request — these are absolute print sizes, on-screen sizes untouched. */
+    font-size: 3.9pt;
   }
 
   .recipe-detail-header,
@@ -908,11 +910,11 @@ main {
   }
 
   .recipe-detail-header h1 {
-    font-size: 20pt;
+    font-size: 7pt;
   }
 
   h2 {
-    font-size: 14pt;
+    font-size: 5pt;
   }
 
   .recipe-eyebrow,
@@ -921,7 +923,7 @@ main {
   .badge-outline,
   .ingredients-list li,
   .steps-list li {
-    font-size: 11pt;
+    font-size: 3.9pt;
   }
 
   .badge,
