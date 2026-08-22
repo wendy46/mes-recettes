@@ -920,10 +920,13 @@ main {
   .recipe-eyebrow,
   .recipe-eyebrow-source,
   .badge,
-  .badge-outline,
+  .badge-outline {
+    font-size: 3.9pt;
+  }
+
   .ingredients-list li,
   .steps-list li {
-    font-size: 3.9pt;
+    font-size: 9pt;
   }
 
   .badge,
