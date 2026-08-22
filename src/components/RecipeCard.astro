@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { recipe } = Astro.props;
-const { title, category, servings, prep_time, cook_time, image } = recipe.data;
+const { title, category, servings, prep_time, cook_time, image, date_added } = recipe.data;
 const imgSrc = getRecipeImage(recipe.slug, category, image);
 ---
 
@@ -17,6 +17,7 @@ const imgSrc = getRecipeImage(recipe.slug, category, image);
   href={`/recettes/${recipe.slug}/`}
   data-title={title.toLowerCase()}
   data-category={category}
+  data-date={date_added.getTime()}
 >
   <div class="recipe-card-media">
     <img src={imgSrc} alt={title} loading="lazy" />

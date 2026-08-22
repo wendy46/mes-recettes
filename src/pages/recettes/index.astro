@@ -4,8 +4,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import RecipeCard from "../../components/RecipeCard.astro";
 import CategoryPills from "../../components/CategoryPills.astro";
 
-const recipes = (await getCollection("recipes")).sort((a, b) =>
-  a.data.title.localeCompare(b.data.title, "fr")
+const recipes = (await getCollection("recipes")).sort(
+  (a, b) => b.data.date_added.valueOf() - a.data.date_added.valueOf()
 );
 ---
 
@@ -15,15 +15,26 @@ const recipes = (await getCollection("recipes")).sort((a, b) =>
 
   <CategoryPills />
 
-  <div class="search-wrap">
-    <label for="recipe-search" class="visually-hidden">Rechercher une recette</label>
-    <input
-      id="recipe-search"
-      class="search-input"
-      type="search"
-      placeholder="Rechercher une recette par son nom…"
-      autocomplete="off"
-    />
+  <div class="recipe-controls">
+    <div class="search-wrap">
+      <label for="recipe-search" class="visually-hidden">Rechercher une recette</label>
+      <input
+        id="recipe-search"
+        class="search-input"
+        type="search"
+        placeholder="Rechercher une recette par son nom…"
+        autocomplete="off"
+      />
+    </div>
+
+    <div class="sort-wrap">
+      <label for="recipe-sort" class="visually-hidden">Trier les recettes</label>
+      <select id="recipe-sort" class="sort-select">
+        <option value="date" selected>Date d'ajout</option>
+        <option value="alpha">Ordre alphabétique</option>
+        <option value="category">Catégorie</option>
+      </select>
+    </div>
   </div>
 
   <p class="search-empty" id="search-empty">Aucune recette ne correspond à votre recherche.</p>
@@ -37,17 +48,44 @@ const recipes = (await getCollection("recipes")).sort((a, b) =>
 
 <script>
   const input = document.getElementById("recipe-search") as HTMLInputElement | null;
+  const sortSelect = document.getElementById("recipe-sort") as HTMLSelectElement | null;
   const emptyMessage = document.getElementById("search-empty");
+  const grid = document.getElementById("recipe-grid");
   const pills = Array.from(document.querySelectorAll<HTMLElement>("[data-category-pill]"));
   const cards = Array.from(document.querySelectorAll<HTMLElement>(".recipe-card"));
 
+  // Same category order as the filter pills, used to group the "Catégorie" sort.
+  const categoryOrder = ["Entrées", "Tartes & Salades", "Plats", "Desserts", "Préparations"];
+
   let activeCategory = "all";
+  let activeSort = "date";
+
+  function sortCards(list: HTMLElement[]) {
+    const sorted = [...list];
+    sorted.sort((a, b) => {
+      if (activeSort === "alpha") {
+        return (a.dataset.title || "").localeCompare(b.dataset.title || "", "fr");
+      }
+      if (activeSort === "category") {
+        const aIndex = categoryOrder.indexOf(a.dataset.category || "");
+        const bIndex = categoryOrder.indexOf(b.dataset.category || "");
+        if (aIndex !== bIndex) return aIndex - bIndex;
+        return (a.dataset.title || "").localeCompare(b.dataset.title || "", "fr");
+      }
+      // "date" (default): most recently added first.
+      return Number(b.dataset.date || 0) - Number(a.dataset.date || 0);
+    });
+    return sorted;
+  }
 
   function applyFilters() {
     const query = (input?.value || "").trim().toLowerCase();
     let visibleCount = 0;
 
-    cards.forEach((card) => {
+    const ordered = sortCards(cards);
+    ordered.forEach((card) => {
+      grid?.appendChild(card);
+
       const title = card.dataset.title || "";
       const category = card.dataset.category || "";
       const matchesCategory = activeCategory === "all" || category === activeCategory;
@@ -77,6 +115,13 @@ const recipes = (await getCollection("recipes")).sort((a, b) =>
 
   if (input) {
     input.addEventListener("input", applyFilters);
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", () => {
+      activeSort = sortSelect.value;
+      applyFilters();
+    });
   }
 
   // Pre-fill from the header search box (?q=...) so both filters land in sync.
