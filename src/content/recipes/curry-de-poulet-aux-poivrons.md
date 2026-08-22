@@ -6,6 +6,7 @@ servings: 4 personnes
 prep_time: 40 min
 cook_time: 40 min
 notes: 'Source : Madhur Jaffrey ([lien](https://www.tfrecipes.com/chettinad-pepper-chicken-recipe-courtesy-of-madhur-jaffrey/) via Maël) | Note : 4/5'
+source: 'Madhur Jaffrey (lien via Maël)'
 ingredients:
 - 1 kg de viande de poulet coupée en dés
 - 2 gros oignons, hachés grossièrement

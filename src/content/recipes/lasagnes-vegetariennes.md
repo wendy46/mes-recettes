@@ -4,6 +4,7 @@ category: Plats
 date_added: '2026-08-18'
 servings: 6 personnes
 notes: 'Source : [*https://www.missmaggieskitchen.com/plats/2017/6/20/lasagnes-poireaux-epinards*](https://www.missmaggieskitchen.com/plats/2017/6/20/lasagnes-poireaux-epinards) | Note : 4/5 | 40 min'
+source: 'https://www.missmaggieskitchen.com/plats/2017/6/20/lasagnes-poireaux-epinards'
 ingredients:
 - huile d’olive
 - 4 poireaux tranchés finement

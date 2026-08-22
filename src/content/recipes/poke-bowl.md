@@ -5,6 +5,7 @@ date_added: '2026-08-18'
 servings: 2 bowls
 prep_time: 35 min
 notes: 'Source : Bowls Healthy | Note : 5/5'
+source: 'Bowls Healthy'
 ingredients:
 - 1 pavé de saumon
 - 150g de riz a sushi

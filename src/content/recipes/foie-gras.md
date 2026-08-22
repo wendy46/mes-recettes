@@ -4,6 +4,7 @@ category: Préparations
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Maman | Note : 4/5 | 25 min | Temps de repos : 3 jours'
+source: 'Maman'
 ingredients:
 - 1 foie gras frais cru des Landes (600g)
 - 16g de sel fin

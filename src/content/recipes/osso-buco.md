@@ -4,6 +4,7 @@ category: Plats
 date_added: '2026-08-18'
 servings: 4 personnes
 notes: 'Source : Françoise Bernard | Note : 5/5 | 1h 30min'
+source: 'Françoise Bernard'
 ingredients:
 - 1 kg de jarrets de veau en rondelles
 - 2 cuillerées à soupe de farine

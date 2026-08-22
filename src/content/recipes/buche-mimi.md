@@ -4,6 +4,7 @@ category: Desserts
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Mimi | Note : 3/5 | 30 min'
+source: 'Mimi'
 ingredients:
 - 3 oeufs
 - 100g de sucre semoule

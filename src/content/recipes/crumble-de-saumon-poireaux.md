@@ -4,6 +4,7 @@ category: Plats
 date_added: '2026-08-18'
 servings: 6/8 personnes
 notes: 'Source : lescroquesmadame (instagram) | Note : 4/5 | 15 min'
+source: 'lescroquesmadame (instagram)'
 ingredients:
 - 2 gros poireaux
 - 1 oignon jaune 4 tranches de saumon fumé 1 cas de crème végétale 1 cas d’huile d’olive

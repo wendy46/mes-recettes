@@ -4,6 +4,7 @@ category: Plats
 date_added: '2026-08-18'
 servings: 4 personnes
 notes: 'Source : Françoise Bernard | Note : 4/5 | 1h 30min'
+source: 'Françoise Bernard'
 ingredients:
 - 1 kg tendron de veau en morceau 1/2 citron
 - 1 carotte

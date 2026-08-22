@@ -5,6 +5,7 @@ date_added: '2026-08-18'
 servings: 6 personnes
 cook_time: 1h
 notes: 'Source : Maman | Note : 5/5'
+source: 'Maman'
 ingredients:
 - 1 poularde de 2,1 kg
 - 40 g de morilles séchées (déshydratées)

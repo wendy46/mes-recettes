@@ -4,6 +4,7 @@ category: Desserts
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Marmiton | Note : 4/5 | 40 min | Temps de repos : 12 h'
+source: 'Marmiton'
 ingredients:
 - 2 oeufs
 - 60 g de sucre

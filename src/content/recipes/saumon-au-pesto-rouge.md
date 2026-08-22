@@ -6,6 +6,7 @@ servings: 12 personnes
 prep_time: 10 min
 cook_time: 20 min
 notes: 'Source : Marie | Note : 4/5'
+source: 'Marie'
 ingredients:
 - 1 filet de saumon label rouge 1kg 800
 - 4 cas de pesto aux tomates séchées

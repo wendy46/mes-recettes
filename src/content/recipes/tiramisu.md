@@ -4,6 +4,7 @@ category: Desserts
 date_added: '2026-08-18'
 servings: 10 personnes
 notes: 'Source : Brubru | Note : 4/5 | 30 min | Temps de repos : 12 h'
+source: 'Brubru'
 ingredients:
 - 2 paquets de boudoirs
 - 6 gros oeufs

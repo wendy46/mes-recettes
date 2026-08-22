@@ -4,6 +4,7 @@ category: Entrées
 date_added: '2026-08-18'
 servings: 8/10 personnes
 notes: 'Source : Peter van Dijk (wine pairing Amsterdam) | Note : 5/5 | 25 min'
+source: 'Peter van Dijk (wine pairing Amsterdam)'
 ingredients:
 - 1 kg de filets de poisson blanc fermes (Morue - Corvina - Perche)
 - ½ citron

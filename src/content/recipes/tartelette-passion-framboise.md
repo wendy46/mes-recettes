@@ -4,6 +4,7 @@ category: Desserts
 date_added: '2026-08-18'
 servings: 6/8 personnes
 notes: 'Source : *https://www.meilleurduchef.com/fr/recette/tartelette-passion-framboise.html* | Note : 4/5 | 2 h (à commencer la veille)'
+source: 'https://www.meilleurduchef.com/fr/recette/tartelette-passion-framboise.html'
 ingredients:
 - GARNITURE
 - 150 g de framboises fraîches

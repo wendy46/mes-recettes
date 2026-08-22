@@ -6,6 +6,7 @@ servings: 8 personnes
 prep_time: 20 min
 cook_time: 30 minutes
 notes: 'Source : Maman | Note : 4/5'
+source: 'Maman'
 ingredients:
 - 1 kg d'asperges vertes
 - 6 œufs

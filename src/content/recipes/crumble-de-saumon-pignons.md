@@ -4,6 +4,7 @@ category: Plats
 date_added: '2026-08-18'
 servings: 4 personnes
 notes: 'Source : annabel (Marie) | Note : 4/5 | 15 min'
+source: 'annabel (Marie)'
 ingredients:
 - 500/600 g de filet de saumon
 - 2 oignons

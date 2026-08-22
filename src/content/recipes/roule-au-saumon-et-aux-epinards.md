@@ -4,6 +4,7 @@ category: Entrées
 date_added: '2026-08-18'
 servings: 4/8 personnes
 notes: 'Source : internet | Note : 5/5 | 45 min | Temps de repos : 1 heure'
+source: 'internet'
 ingredients:
 - 600 g épinards hachés
 - 3 oeufs

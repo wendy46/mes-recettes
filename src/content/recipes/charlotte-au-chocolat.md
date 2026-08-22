@@ -4,6 +4,7 @@ category: Desserts
 date_added: '2026-08-18'
 servings: 6 personnes
 notes: 'Source : Françoise Bernard | Note : 4/5 | 30 min'
+source: 'Françoise Bernard'
 ingredients:
 - 125g de biscuits à la cuiller
 - 1 petit verre de liqueur d’orange ou rhum

@@ -6,6 +6,7 @@ servings: 4 personnes
 prep_time: 20 min
 cook_time: 15 min
 notes: 'Source : Marie | Note : 4/5'
+source: 'Marie'
 ingredients:
 - 1 pâte à pizza
 - 200 g pesto

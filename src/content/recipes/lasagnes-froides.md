@@ -5,6 +5,7 @@ date_added: '2026-08-22'
 servings: 6 personnes
 prep_time: 40 min
 notes: 'Source : Instagram (accroauresto) | Note : 4/5'
+source: 'Instagram (accroauresto)'
 ingredients:
 - 2 à 3 feuilles de lasagne fraîches
 - 1,5 courgettes

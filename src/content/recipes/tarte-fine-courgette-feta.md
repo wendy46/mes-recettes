@@ -6,6 +6,7 @@ servings: 4 personnes (une tarte)
 prep_time: 15 min
 cook_time: 40 min
 notes: 'Source : lescroquesmadame (instagram) | Note : 4/5'
+source: 'lescroquesmadame (instagram)'
 ingredients:
 - 2 courgettes
 - 1 yaourt nature ou de la ricotta Moutarde à l'ancienne Feta Miel

@@ -6,6 +6,7 @@ servings: 6/8 personnes
 prep_time: 20 min
 cook_time: 40 min
 notes: 'Source : Papilleetpupilles | Note : 5/5'
+source: 'Papilleetpupilles'
 ingredients:
 - 2 pâtes feuilletée 350 g de blancs de poulet
 - 2 cas d’huile d’olive

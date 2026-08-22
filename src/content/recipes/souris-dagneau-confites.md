@@ -6,6 +6,7 @@ servings: 8 personnes
 prep_time: 25 min
 cook_time: 2h30 min
 notes: 'Source : Maman | Note : 4/5'
+source: 'Maman'
 ingredients:
 - 4 souris d’agneau
 - 2 bottes d’oignons nouveaux

@@ -6,6 +6,7 @@ servings: 6/8  personnes
 prep_time: 50 min
 cook_time: 1 heure
 notes: 'Source : Maman | Note : 4/5'
+source: 'Maman'
 ingredients:
 - 450g saumon boite
 - 300g saumon frais

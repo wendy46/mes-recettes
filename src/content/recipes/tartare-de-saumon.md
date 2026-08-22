@@ -4,6 +4,7 @@ category: Entrées
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : La maison du Bassin | Note : 4/5 | 25 min | Temps de repos : 3 jours'
+source: 'La maison du Bassin'
 ingredients:
 - saumon - 600g
 - 2 avocats 2 citrons

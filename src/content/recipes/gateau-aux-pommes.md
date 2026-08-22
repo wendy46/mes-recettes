@@ -4,6 +4,7 @@ category: Desserts
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Marie-Aline | Note : 4/5 | 20 min'
+source: 'Marie-Aline'
 ingredients:
 - 5 cuillères à  soupe bombées de farine
 - 4 cuillères à  soupe de sucre

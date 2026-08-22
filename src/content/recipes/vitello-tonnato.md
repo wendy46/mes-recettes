@@ -5,6 +5,7 @@ date_added: '2026-08-21'
 servings: 6 personnes
 cook_time: 1h
 notes: 'Source : thewaywewantt (instagram) | Note : 5/5'
+source: 'thewaywewantt (instagram)'
 ingredients:
 - 700 g de noix de veau
 - 2 c.à.s de moutarde de Dijon

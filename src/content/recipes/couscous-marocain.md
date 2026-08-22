@@ -5,6 +5,7 @@ date_added: '2026-08-18'
 servings: 6 personnes
 cook_time: 1h
 notes: 'Source : Essaouira | Note : 5/5'
+source: 'Essaouira'
 ingredients:
 - Poulet
 - Oignon blanc

@@ -6,6 +6,7 @@ servings: 4 personnes
 prep_time: 20 minutes
 cook_time: 40 minutes
 notes: 'Source : louloukitchen\_ (Instagram) | Note : 5/5'
+source: 'louloukitchen_ (Instagram)'
 ingredients:
 - 140 g de thon entier, (poids net égoutté)
 - 2 œufs

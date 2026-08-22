@@ -6,6 +6,7 @@ servings: 6-8 patties
 prep_time: 25 Minutes
 cook_time: 35 Minutes
 notes: 'Source : Oh She Glows | Note : 4/5'
+source: 'Oh She Glows'
 ingredients:
 - 1.5 cups grated yam (I used a sweet potato in a pinch)
 - 2 large garlic cloves, peeled

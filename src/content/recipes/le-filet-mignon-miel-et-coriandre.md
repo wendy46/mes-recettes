@@ -6,6 +6,7 @@ servings: 8 personnes
 prep_time: 15 min
 cook_time: 1 heure
 notes: 'Source : [CASSEROLE ET CHOCOLAT](https://www.casseroleetchocolat.fr/filet-mignon-miel-coriandre/) | Note : 4/5'
+source: 'CASSEROLE ET CHOCOLAT'
 ingredients:
 - 2 filets mignon de porc
 - 3 cuillères à soupe de miel

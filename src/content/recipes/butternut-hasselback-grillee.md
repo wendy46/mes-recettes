@@ -6,6 +6,7 @@ servings: 2 personnes
 prep_time: 10 min
 cook_time: 1h
 notes: 'Source : simonauscher (instagram) | Note : 4/5'
+source: 'simonauscher (instagram)'
 ingredients:
 - 1 demi butternut
 - 15 cl d'huile d’olive

@@ -4,6 +4,7 @@ category: Plats
 date_added: '2026-08-18'
 servings: 4/6 personnes
 notes: 'Source : Marie | Note : 4/5 | 20 min'
+source: 'Marie'
 ingredients:
 - 2 filets mignons de porc
 - Huile de tournesol

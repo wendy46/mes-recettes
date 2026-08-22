@@ -5,6 +5,7 @@ date_added: '2026-08-18'
 servings: 4-6 personnes
 cook_time: 7h
 notes: 'Source : Ottolenghi | Note : 5/5 | Temps de repos : 12h'
+source: 'Ottolenghi'
 ingredients:
 - I belle épaule d'agneau (2kg)
 - '2 citrons: 1 cas de zeste et 4 cas de jus'

@@ -4,6 +4,7 @@ category: Desserts
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Caro | Note : 4/5 | 15 min'
+source: 'Caro'
 ingredients:
 - 150g chocolat noir
 - 150g sucre cristallisé (ou canne)

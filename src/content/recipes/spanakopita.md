@@ -6,6 +6,7 @@ servings: 6 personnes (une tarte)
 prep_time: 30 min
 cook_time: 40 min
 notes: 'Source : whoogys (Instagram). Note donnée : 4/5 étoiles.'
+source: 'whoogys (Instagram)'
 ingredients:
 - 400g d'épinards
 - 250g de fêta
