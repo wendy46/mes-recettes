@@ -291,6 +291,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    /* display: contents below flattens .hero-text's children into this
+       flex list, so the grid's 2rem gap would otherwise apply between
+       EVERY element (title, subtitle, badges, photo, buttons) instead of
+       just once between the text block and the photo. Zero it out and
+       rely on each element's own margin for spacing instead. */
+    gap: 0;
   }
 
   .hero-text {
@@ -303,10 +309,12 @@ main {
 
   .hero-title {
     order: 2;
+    font-size: 1.7rem;
   }
 
   .hero-subtitle {
     order: 3;
+    margin-bottom: 0.75rem;
   }
 
   .hero-meta {
@@ -315,6 +323,7 @@ main {
 
   .hero-media {
     order: 5;
+    margin-bottom: 0.5rem;
   }
 
   .hero-actions {
