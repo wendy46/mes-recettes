@@ -24,4 +24,7 @@ export const ICONS = {
   ),
   search: svg('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>'),
   arrowRight: svg('<path d="M5 12h14"/><path d="M13 6l6 6-6 6"/>'),
+  sort: svg(
+    '<path d="M7 4v16"/><path d="M4 7l3-3 3 3"/><path d="M17 20V4"/><path d="M20 17l-3 3-3-3"/>'
+  ),
 };

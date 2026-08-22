@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import RecipeCard from "../../components/RecipeCard.astro";
 import CategoryPills from "../../components/CategoryPills.astro";
+import { ICONS } from "../../lib/icons";
 
 const recipes = (await getCollection("recipes")).sort(
   (a, b) => b.data.date_added.valueOf() - a.data.date_added.valueOf()
@@ -13,16 +14,26 @@ const recipes = (await getCollection("recipes")).sort(
   <h1>Toutes les recettes</h1>
   <p>{recipes.length} recettes au total. Filtrez par catégorie ou cherchez par nom.</p>
 
-  <CategoryPills />
+  <div class="recipe-toolbar">
+    <CategoryPills />
 
-  <div class="recipe-controls">
-    <div class="sort-wrap">
-      <label for="recipe-sort" class="visually-hidden">Trier les recettes</label>
-      <select id="recipe-sort" class="sort-select">
-        <option value="date" selected>Date d'ajout</option>
-        <option value="alpha">Ordre alphabétique</option>
-        <option value="category">Catégorie</option>
-      </select>
+    <div class="sort-control">
+      <button
+        type="button"
+        id="sort-toggle"
+        class="icon-btn"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="sort-menu"
+        aria-label="Trier les recettes"
+      >
+        <span class="icon" set:html={ICONS.sort} />
+      </button>
+      <div class="sort-menu" id="sort-menu" role="menu" hidden>
+        <button type="button" class="sort-option" role="menuitem" data-sort-value="date">Date d'ajout</button>
+        <button type="button" class="sort-option" role="menuitem" data-sort-value="alpha">Ordre alphabétique</button>
+        <button type="button" class="sort-option" role="menuitem" data-sort-value="category">Catégorie</button>
+      </div>
     </div>
   </div>
 
@@ -39,7 +50,9 @@ const recipes = (await getCollection("recipes")).sort(
   // The header search box (in BaseLayout) is now the only search input on the
   // site. On this page it live-filters the grid instead of navigating.
   const input = document.getElementById("nav-search-input") as HTMLInputElement | null;
-  const sortSelect = document.getElementById("recipe-sort") as HTMLSelectElement | null;
+  const sortToggle = document.getElementById("sort-toggle") as HTMLButtonElement | null;
+  const sortMenu = document.getElementById("sort-menu") as HTMLElement | null;
+  const sortOptions = Array.from(document.querySelectorAll<HTMLButtonElement>(".sort-option"));
   const emptyMessage = document.getElementById("search-empty");
   const grid = document.getElementById("recipe-grid");
   const pills = Array.from(document.querySelectorAll<HTMLElement>("[data-category-pill]"));
@@ -109,12 +122,59 @@ const recipes = (await getCollection("recipes")).sort(
     input.addEventListener("input", applyFilters);
   }
 
-  if (sortSelect) {
-    sortSelect.addEventListener("change", () => {
-      activeSort = sortSelect.value;
-      applyFilters();
+  function closeSortMenu() {
+    if (!sortMenu || !sortToggle) return;
+    sortMenu.hidden = true;
+    sortToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openSortMenu() {
+    if (!sortMenu || !sortToggle) return;
+    sortMenu.hidden = false;
+    sortToggle.setAttribute("aria-expanded", "true");
+    // Default anchor is the button's right edge. On narrow screens the
+    // button can end up near the left edge of the viewport, which would
+    // push the menu off-screen — flip to the button's left edge instead.
+    sortMenu.style.left = "";
+    sortMenu.style.right = "0";
+    const rect = sortMenu.getBoundingClientRect();
+    if (rect.left < 8) {
+      sortMenu.style.right = "";
+      sortMenu.style.left = "0";
+    }
+  }
+
+  if (sortToggle && sortMenu) {
+    sortToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (sortMenu.hidden) {
+        openSortMenu();
+      } else {
+        closeSortMenu();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!sortMenu.hidden && !sortMenu.contains(event.target as Node) && event.target !== sortToggle) {
+        closeSortMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !sortMenu.hidden) {
+        closeSortMenu();
+        sortToggle.focus();
+      }
     });
   }
+
+  sortOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      activeSort = option.dataset.sortValue || "date";
+      closeSortMenu();
+      applyFilters();
+    });
+  });
 
   // Landed here via the header search (e.g. /recettes/?q=...) — reflect it
   // into the header input and apply it as the active filter immediately.
