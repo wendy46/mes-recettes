@@ -149,13 +149,14 @@ img {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
+  border-bottom: 2px solid transparent;
 }
 
 .site-nav a:hover,
 .site-nav a.active {
   color: var(--color-accent-dark);
   text-decoration: none;
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom-color: var(--color-accent);
 }
 
 .nav-search {
@@ -276,6 +277,47 @@ main {
 @media (min-width: 780px) {
   .hero-grid {
     grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+/* Mobile-only: move the photo up so it appears right after the badges,
+   before the CTA buttons, without altering the desktop side-by-side
+   layout or the DOM order. `.hero-text` is flattened with
+   `display: contents` so its children become direct flex items of
+   `.hero-grid`, sitting alongside `.hero-media`, and can be reordered
+   individually. */
+@media (max-width: 779.98px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text {
+    display: contents;
+  }
+
+  .hero-eyebrow {
+    order: 1;
+  }
+
+  .hero-title {
+    order: 2;
+  }
+
+  .hero-subtitle {
+    order: 3;
+  }
+
+  .hero-meta {
+    order: 4;
+  }
+
+  .hero-media {
+    order: 5;
+  }
+
+  .hero-actions {
+    order: 6;
   }
 }
 
@@ -537,13 +579,12 @@ main {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   color: var(--color-text);
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  transition: box-shadow 0.15s ease;
 }
 
 .recipe-card:hover {
   box-shadow: var(--shadow-md);
   text-decoration: none;
-  transform: translateY(-2px);
 }
 
 .recipe-card-media {
