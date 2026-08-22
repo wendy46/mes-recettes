@@ -751,6 +751,10 @@ main {
   flex: 0 0 auto;
 }
 
+.recipe-menu-control .icon-btn {
+  border: none;
+}
+
 .recipe-menu {
   position: absolute;
   top: calc(100% + 0.5rem);
@@ -888,6 +892,10 @@ main {
   body {
     background: #fff;
     color: #000;
+    /* Screen sizing (rem/vw/clamp) reads much larger on a printed page
+       than on a browser viewport — fix an absolute, print-appropriate
+       base size here instead, without touching any on-screen size. */
+    font-size: 11pt;
   }
 
   .recipe-detail-header,
@@ -897,6 +905,23 @@ main {
   .ingredients-list li,
   .steps-list li {
     color: #000;
+  }
+
+  .recipe-detail-header h1 {
+    font-size: 20pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+  }
+
+  .recipe-eyebrow,
+  .recipe-eyebrow-source,
+  .badge,
+  .badge-outline,
+  .ingredients-list li,
+  .steps-list li {
+    font-size: 11pt;
   }
 
   .badge,
