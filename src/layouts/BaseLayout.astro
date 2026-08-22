@@ -60,5 +60,14 @@ function isActive(href: string) {
         <p>Fait avec amour, une recette à la fois.</p>
       </div>
     </footer>
+    <script>
+      // On the recipe listing page, the header search already live-filters
+      // the grid as you type — submitting (e.g. pressing Enter) would just
+      // reload the same page, so skip the navigation there.
+      const navSearchForm = document.querySelector<HTMLFormElement>(".nav-search");
+      if (navSearchForm && window.location.pathname === "/recettes/") {
+        navSearchForm.addEventListener("submit", (event) => event.preventDefault());
+      }
+    </script>
   </body>
 </html>

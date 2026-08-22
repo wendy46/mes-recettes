@@ -16,17 +16,6 @@ const recipes = (await getCollection("recipes")).sort(
   <CategoryPills />
 
   <div class="recipe-controls">
-    <div class="search-wrap">
-      <label for="recipe-search" class="visually-hidden">Rechercher une recette</label>
-      <input
-        id="recipe-search"
-        class="search-input"
-        type="search"
-        placeholder="Rechercher une recette par son nom…"
-        autocomplete="off"
-      />
-    </div>
-
     <div class="sort-wrap">
       <label for="recipe-sort" class="visually-hidden">Trier les recettes</label>
       <select id="recipe-sort" class="sort-select">
@@ -47,7 +36,9 @@ const recipes = (await getCollection("recipes")).sort(
 </BaseLayout>
 
 <script>
-  const input = document.getElementById("recipe-search") as HTMLInputElement | null;
+  // The header search box (in BaseLayout) is now the only search input on the
+  // site. On this page it live-filters the grid instead of navigating.
+  const input = document.getElementById("nav-search-input") as HTMLInputElement | null;
   const sortSelect = document.getElementById("recipe-sort") as HTMLSelectElement | null;
   const emptyMessage = document.getElementById("search-empty");
   const grid = document.getElementById("recipe-grid");
@@ -87,9 +78,10 @@ const recipes = (await getCollection("recipes")).sort(
       grid?.appendChild(card);
 
       const title = card.dataset.title || "";
+      const ingredientsText = card.dataset.ingredients || "";
       const category = card.dataset.category || "";
       const matchesCategory = activeCategory === "all" || category === activeCategory;
-      const matchesQuery = title.includes(query);
+      const matchesQuery = !query || title.includes(query) || ingredientsText.includes(query);
       const show = matchesCategory && matchesQuery;
       card.style.display = show ? "" : "none";
       if (show) visibleCount++;
@@ -124,7 +116,8 @@ const recipes = (await getCollection("recipes")).sort(
     });
   }
 
-  // Pre-fill from the header search box (?q=...) so both filters land in sync.
+  // Landed here via the header search (e.g. /recettes/?q=...) — reflect it
+  // into the header input and apply it as the active filter immediately.
   const params = new URLSearchParams(window.location.search);
   const initialQuery = params.get("q");
   if (initialQuery && input) {

@@ -15,6 +15,13 @@ const teasers = byDateDesc.slice(1, 4);
 
 const { title, category, servings, prep_time, cook_time, image } = featured.data;
 const featuredImage = getRecipeImage(featured.slug, category, image);
+
+// Split the recipe title into a coral-accented first chunk and a dark
+// remainder, echoing the two-tone treatment used by the site logo.
+const titleWords = title.split(" ");
+const accentWordCount = titleWords.length > 1 ? Math.ceil(titleWords.length / 2) : 1;
+const titleAccent = titleWords.slice(0, accentWordCount).join(" ");
+const titleRest = titleWords.slice(accentWordCount).join(" ");
 ---
 
 <BaseLayout title="Mes Recettes Bernon — Accueil">
@@ -22,9 +29,11 @@ const featuredImage = getRecipeImage(featured.slug, category, image);
     <div class="hero-grid">
       <div class="hero-text">
         <p class="hero-eyebrow">Nouveauté</p>
-        <h1 class="hero-title"><span class="accent-text">Découvrez</span> nos recettes maison</h1>
+        <h1 class="hero-title">
+          <span class="accent-text">{titleAccent}</span>{titleRest && <>&nbsp;{titleRest}</>}
+        </h1>
         <p class="hero-subtitle">
-          La dernière recette ajoutée à la collection&nbsp;: <strong>{title}</strong>.
+          La dernière recette ajoutée à notre collection.
         </p>
         <div class="hero-meta">
           {servings && <span class="badge badge-outline">Pour {servings}</span>}
@@ -48,7 +57,7 @@ const featuredImage = getRecipeImage(featured.slug, category, image);
 
   {teasers.length > 0 && (
     <section class="home-teasers">
-      <h2>À découvrir aussi</h2>
+      <h2>Ajouts récents</h2>
       <div class="recipe-grid">
         {teasers.map((recipe) => (
           <RecipeCard recipe={recipe} />
