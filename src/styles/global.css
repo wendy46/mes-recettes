@@ -735,7 +735,88 @@ main {
 
 .back-link {
   display: inline-block;
+}
+
+/* Detail page toolbar: back link (left) + three-dot options menu (right) */
+.detail-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin-bottom: 1.5rem;
+}
+
+.recipe-menu-control {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.recipe-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 10;
+  min-width: 230px;
+  padding: 0.4rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-menu-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: none;
+  border-radius: calc(var(--radius-md) - 2px);
+  background: transparent;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.recipe-menu-option .icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.recipe-menu-option:hover,
+.recipe-menu-option:focus-visible {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-dark);
+}
+
+.recipe-menu-option:hover .icon,
+.recipe-menu-option:focus-visible .icon {
+  color: var(--color-accent-dark);
+}
+
+.recipe-menu-toast {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  z-index: 10;
+  padding: 0.5rem 0.85rem;
+  background: var(--color-ink);
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.recipe-menu-toast.visible {
+  opacity: 1;
 }
 
 @media (max-width: 640px) {
@@ -786,5 +867,51 @@ main {
   .pill {
     padding: 0.5rem 0.85rem;
     font-size: 0.85rem;
+  }
+}
+
+/* Print: keep only the recipe itself — no site chrome, no controls. */
+@media print {
+  .site-header,
+  .site-footer,
+  .nav-search,
+  .back-link,
+  .recipe-menu-control,
+  .recipe-menu-toast {
+    display: none !important;
+  }
+
+  .detail-toolbar {
+    margin-bottom: 0;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .recipe-detail-header,
+  .recipe-eyebrow,
+  .recipe-eyebrow-source,
+  h1, h2, h3, h4,
+  .ingredients-list li,
+  .steps-list li {
+    color: #000;
+  }
+
+  .badge,
+  .badge-outline {
+    background: #fff;
+    border: 1px solid #999;
+    color: #000;
+  }
+
+  .recipe-banner {
+    box-shadow: none;
+  }
+
+  .recipe-card,
+  .recipe-menu {
+    box-shadow: none;
   }
 }

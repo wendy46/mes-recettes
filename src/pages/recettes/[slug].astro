@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getRecipeImage } from "../../utils/images";
+import { ICONS } from "../../lib/icons";
 
 export async function getStaticPaths() {
   const recipes = await getCollection("recipes");
@@ -17,7 +18,34 @@ const imgSrc = getRecipeImage(recipe.slug, category, image);
 ---
 
 <BaseLayout title={`${title} — Mes Recettes Bernon`}>
-  <a class="back-link" href="/recettes/">&larr; Retour à toutes les recettes</a>
+  <div class="detail-toolbar">
+    <a class="back-link" href="/recettes/">&larr; Retour à toutes les recettes</a>
+
+    <div class="recipe-menu-control" data-recipe-title={title}>
+      <button
+        type="button"
+        id="recipe-menu-toggle"
+        class="icon-btn"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="recipe-menu"
+        aria-label="Plus d'options"
+      >
+        <span class="icon" set:html={ICONS.moreVertical} />
+      </button>
+      <div class="recipe-menu" id="recipe-menu" role="menu" hidden>
+        <button type="button" class="recipe-menu-option" role="menuitem" id="share-option">
+          <span class="icon" set:html={ICONS.share} />
+          Partager
+        </button>
+        <button type="button" class="recipe-menu-option" role="menuitem" id="print-option">
+          <span class="icon" set:html={ICONS.print} />
+          Imprimer / Exporter en PDF
+        </button>
+      </div>
+      <span class="recipe-menu-toast" id="recipe-menu-toast" role="status" aria-live="polite">Lien copié !</span>
+    </div>
+  </div>
 
   <div class="recipe-banner">
     <img src={imgSrc} alt={title} />
@@ -56,3 +84,87 @@ const imgSrc = getRecipeImage(recipe.slug, category, image);
     </section>
   </div>
 </BaseLayout>
+
+<script>
+  const menuControl = document.querySelector<HTMLElement>(".recipe-menu-control");
+  const menuToggle = document.getElementById("recipe-menu-toggle") as HTMLButtonElement | null;
+  const menu = document.getElementById("recipe-menu") as HTMLElement | null;
+  const shareOption = document.getElementById("share-option") as HTMLButtonElement | null;
+  const printOption = document.getElementById("print-option") as HTMLButtonElement | null;
+  const toast = document.getElementById("recipe-menu-toast") as HTMLElement | null;
+  const recipeTitle = menuControl?.dataset.recipeTitle || document.title;
+
+  function closeMenu() {
+    if (!menu || !menuToggle) return;
+    menu.hidden = true;
+    menuToggle.setAttribute("aria-expanded", "false");
+  }
+
+  function openMenu() {
+    if (!menu || !menuToggle) return;
+    menu.hidden = false;
+    menuToggle.setAttribute("aria-expanded", "true");
+  }
+
+  if (menuToggle && menu) {
+    menuToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      if (menu.hidden) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!menu.hidden && !menu.contains(event.target as Node) && event.target !== menuToggle) {
+        closeMenu();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !menu.hidden) {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+  }
+
+  let toastTimer: ReturnType<typeof setTimeout> | undefined;
+  function showToast() {
+    if (!toast) return;
+    toast.classList.add("visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove("visible");
+    }, 2000);
+  }
+
+  if (shareOption) {
+    shareOption.addEventListener("click", async () => {
+      closeMenu();
+      const shareData = { title: recipeTitle, url: window.location.href };
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          // User cancelled the share sheet or it failed silently — nothing to do.
+        }
+      } else if (navigator.clipboard) {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          showToast();
+        } catch (err) {
+          // Clipboard access denied — nothing more we can do without a library.
+        }
+      }
+    });
+  }
+
+  if (printOption) {
+    printOption.addEventListener("click", () => {
+      closeMenu();
+      window.print();
+    });
+  }
+</script>
