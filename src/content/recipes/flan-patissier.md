@@ -3,7 +3,7 @@ title: Flan pâtissier
 category: Desserts
 subtitle: 'avec de la vanille & un feuilletage inversé'
 date_added: '2026-11-06T12:00:00'
-servings: un cercle de 24 cm
+servings: '~ 8 personnes'
 prep_time: '~ 2 h'
 cook_time: '~ 1 h 30'
 notes: 'Source : boulangerienoel_lyon2 (Instagram). Crédit : damienpichon.'
