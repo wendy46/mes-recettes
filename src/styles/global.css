@@ -467,18 +467,29 @@ main {
   transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
 }
 
-.pill:hover {
-  background: var(--color-accent-soft);
-  color: var(--color-accent-dark);
-}
-
 .pill.active {
   background: var(--color-ink);
   color: #fff;
 }
 
-.pill.active:hover {
-  background: var(--color-ink-soft);
+/* Hover styles only on devices that really hover. On touch screens :hover
+   sticks after a tap, which left a deselected pill stuck in pink. */
+@media (hover: hover) and (pointer: fine) {
+  .pill:hover {
+    background: var(--color-accent-soft);
+    color: var(--color-accent-dark);
+  }
+
+  .pill.active:hover {
+    background: var(--color-ink-soft);
+    color: #fff;
+  }
+
+  .pill-sub.active:hover {
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+    color: #fff;
+  }
 }
 
 /* `display` on .pill would otherwise win over the [hidden] attribute. */
@@ -502,11 +513,6 @@ main {
   background: var(--color-accent);
   border-color: var(--color-accent);
   color: #fff;
-}
-
-.pill-sub.active:hover {
-  background: var(--color-accent-dark);
-  border-color: var(--color-accent-dark);
 }
 
 .pill-icon {
