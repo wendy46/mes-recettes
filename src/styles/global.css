@@ -394,6 +394,13 @@ main {
   gap: 0.35rem;
 }
 
+/* Smaller than the badges used elsewhere so they don't hide the photo. */
+.photo-badges .badge {
+  padding: 0.18rem 0.55rem;
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
 .hero-media .photo-badges {
   top: 1rem;
   left: 1rem;
