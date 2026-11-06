@@ -8,8 +8,12 @@ interface Props {
 }
 
 const { recipe } = Astro.props;
-const { title, category, servings, prep_time, cook_time, image, date_added, ingredients } = recipe.data;
+const { title, subtitle, category, servings, prep_time, cook_time, image, date_added, ingredients } = recipe.data;
 const imgSrc = getRecipeImage(recipe.slug, category, image);
+
+// Compact meta line: prep time (or cook time when no prep time is given) + servings.
+const time = prep_time ?? cook_time;
+const people = servings?.replace(/\bpersonnes?\b/i, "pers.");
 ---
 
 <a
@@ -26,16 +30,22 @@ const imgSrc = getRecipeImage(recipe.slug, category, image);
   </div>
   <div class="recipe-card-body">
     <h3>{title}</h3>
-    {(servings || prep_time || cook_time) && (
+    {subtitle && <p class="recipe-card-subtitle">{subtitle}</p>}
+    {(time || people) && (
       <div class="recipe-card-meta">
-        {servings && <span>Pour {servings}</span>}
-        {prep_time && <span>Préparation : {prep_time}</span>}
-        {cook_time && <span>Cuisson : {cook_time}</span>}
+        {time && (
+          <span class="recipe-card-meta-item">
+            <span class="icon" set:html={ICONS.clock} />
+            {time}
+          </span>
+        )}
+        {people && (
+          <span class="recipe-card-meta-item">
+            <span class="icon" set:html={ICONS.users} />
+            {people}
+          </span>
+        )}
       </div>
     )}
-    <span class="btn btn-dark recipe-card-cta">
-      Voir la recette
-      <span class="icon" set:html={ICONS.arrowRight} />
-    </span>
   </div>
 </a>

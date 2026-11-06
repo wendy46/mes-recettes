@@ -1,6 +1,7 @@
 ---
 title: Blanquette de veau
 category: Plats
+subtitle: 'avec des carottes, des champignons & du bouquet garni'
 date_added: '2026-08-18'
 servings: 4 personnes
 notes: 'Source : Françoise Bernard | Note : 4/5 | 1h 30min'

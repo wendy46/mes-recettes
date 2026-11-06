@@ -23,6 +23,10 @@ export const ICONS = {
     '<path d="M12 2v6"/><path d="M9 8c-2 0-3 2-3 4.5S8.5 20 12 20s6-5 6-7.5S16 8 14 8"/><path d="M12 20v2"/>'
   ),
   search: svg('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>'),
+  clock: svg('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>'),
+  users: svg(
+    '<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"/><path d="M18 14.3c2 .8 3.5 2.7 3.5 5.7"/>'
+  ),
   arrowRight: svg('<path d="M5 12h14"/><path d="M13 6l6 6-6 6"/>'),
   sort: svg(
     '<path d="M7 4v16"/><path d="M4 7l3-3 3 3"/><path d="M17 20V4"/><path d="M20 17l-3 3-3-3"/>'

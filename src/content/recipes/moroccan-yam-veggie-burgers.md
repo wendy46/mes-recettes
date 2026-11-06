@@ -1,6 +1,7 @@
 ---
 title: Moroccan Yam Veggie Burgers
 category: Plats
+subtitle: 'avec des pois chiches & une sauce tahini citron vert'
 date_added: '2026-08-18'
 servings: 6-8 patties
 prep_time: 25 Minutes

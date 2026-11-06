@@ -5,6 +5,7 @@ const recipes = defineCollection({
   schema: z.object({
     title: z.string(),
     category: z.enum(['Entrées', 'Tartes & Salades', 'Plats', 'Desserts', 'Préparations']),
+    subtitle: z.string().optional(),
     servings: z.string().optional(),
     prep_time: z.string().optional(),
     cook_time: z.string().optional(),

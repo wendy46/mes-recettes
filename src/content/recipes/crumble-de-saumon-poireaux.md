@@ -1,6 +1,7 @@
 ---
 title: Crumble de saumon poireaux
 category: Plats
+subtitle: 'avec du curry, de la poudre d''amande & du parmesan'
 date_added: '2026-08-18'
 servings: 6/8 personnes
 notes: 'Source : lescroquesmadame (instagram) | Note : 4/5 | 15 min'

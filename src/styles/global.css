@@ -623,23 +623,37 @@ main {
 
 .recipe-card h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
-.recipe-card-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-.recipe-card-meta span {
-  font-size: 0.8rem;
+.recipe-card-subtitle {
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
   color: var(--color-text-muted);
 }
 
-.recipe-card-cta {
+/* Meta line: pushed to the bottom so cards of different heights line up. */
+.recipe-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1.1rem;
   margin-top: auto;
+}
+
+.recipe-card-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.recipe-card-meta-item .icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
 }
 
 /* Detail page */

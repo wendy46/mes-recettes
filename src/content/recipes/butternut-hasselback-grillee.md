@@ -1,6 +1,7 @@
 ---
 title: Butternut hasselback grillée
 category: Plats
+subtitle: 'avec du bleu, du miel & des noix concassées'
 date_added: '2026-08-18'
 servings: 2 personnes
 prep_time: 10 min

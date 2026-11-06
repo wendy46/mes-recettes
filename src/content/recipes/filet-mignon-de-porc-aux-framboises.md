@@ -1,6 +1,7 @@
 ---
 title: Filet mignon de porc aux framboises
 category: Plats
+subtitle: 'avec du vinaigre balsamique, de la cannelle & du thym'
 date_added: '2026-08-18'
 servings: 4/6 personnes
 notes: 'Source : Marie | Note : 4/5 | 20 min'

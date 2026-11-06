@@ -1,6 +1,7 @@
 ---
 title: Tartelette passion - framboise
 category: Desserts
+subtitle: 'avec des groseilles & de la noix de coco'
 date_added: '2026-08-18'
 servings: 6/8 personnes
 notes: 'Source : *https://www.meilleurduchef.com/fr/recette/tartelette-passion-framboise.html* | Note : 4/5 | 2 h (à commencer la veille)'

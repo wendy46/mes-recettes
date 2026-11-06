@@ -1,6 +1,7 @@
 ---
 title: Gravlax de saumon
 category: Entrées
+subtitle: 'à l''aneth, au citron & au thé earl grey'
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Marie | Note : 5/5 | 25 min | Temps de repos : 3 jours'

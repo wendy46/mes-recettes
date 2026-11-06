@@ -1,6 +1,7 @@
 ---
 title: Tiramisu au Safran et eau de rose
 category: Desserts
+subtitle: 'avec du thé earl grey, de la vanille & des pistaches'
 date_added: '2026-08-18'
 servings: 8/10 personnes
 notes: 'Source : [*https://mynameisyeh.com/mynameisyeh/2017/5/saffron-cardamom-and-rosewater-tiramisu*](https://mynameisyeh.com/mynameisyeh/2017/5/saffron-cardamom-and-rosewater-tiramisu) | Note : 5/5 | 25 min | Temps de repos : 12 h'

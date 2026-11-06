@@ -1,6 +1,7 @@
 ---
 title: Poularde au vin jaune du Jura
 category: Plats
+subtitle: 'avec des morilles, des échalotes & de la crème'
 date_added: '2026-08-18'
 servings: 6 personnes
 cook_time: 1h

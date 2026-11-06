@@ -1,6 +1,7 @@
 ---
 title: Tourte au poulet et aux champignons
 category: Plats
+subtitle: 'avec de la moutarde forte, du thym & de l''oignon'
 date_added: '2026-08-18'
 servings: 6/8 personnes
 prep_time: 20 min

@@ -1,6 +1,7 @@
 ---
 title: Poke bowl
 category: Plats
+subtitle: 'avec du saumon, de la mangue & de l''avocat'
 date_added: '2026-08-18'
 servings: 2 bowls
 prep_time: 35 min

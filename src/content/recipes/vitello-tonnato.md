@@ -1,6 +1,7 @@
 ---
 title: Vitello tonnato
 category: Plats
+subtitle: 'avec du thon, des anchois & des câpres'
 date_added: '2026-08-21'
 servings: 6 personnes
 cook_time: 1h

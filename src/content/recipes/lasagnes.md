@@ -1,6 +1,7 @@
 ---
 title: Lasagnes
 category: Plats
+subtitle: 'avec des steaks hachés, du parmesan & du basilic'
 date_added: '2026-08-18'
 servings: 8/10 personnes
 notes: 'Source : Maman | Note : 4/5 | 45 min'

@@ -1,6 +1,7 @@
 ---
 title: Spanakopita
 category: Tartes & Salades
+subtitle: 'avec de la fêta, de l''aneth & des pâtes filo'
 date_added: '2026-08-19'
 servings: 6 personnes (une tarte)
 prep_time: 30 min

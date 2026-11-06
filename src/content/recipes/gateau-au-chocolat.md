@@ -1,6 +1,7 @@
 ---
 title: Gâteau au chocolat
 category: Desserts
+subtitle: 'avec de la poudre d''amandes & du cacao'
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : Caro | Note : 4/5 | 15 min'

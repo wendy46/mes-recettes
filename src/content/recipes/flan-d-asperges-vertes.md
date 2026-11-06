@@ -1,6 +1,7 @@
 ---
 title: Flan d'asperges vertes
 category: Entrées
+subtitle: 'avec du parmesan & de la crème fleurette'
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: 20 min

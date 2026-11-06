@@ -1,6 +1,7 @@
 ---
 title: Tarte fine courgette feta
 category: Tartes & Salades
+subtitle: 'avec du zaatar, du miel & de la moutarde'
 date_added: '2026-08-18'
 servings: 4 personnes (une tarte)
 prep_time: 15 min

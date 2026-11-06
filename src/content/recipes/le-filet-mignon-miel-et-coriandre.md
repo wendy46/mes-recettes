@@ -1,6 +1,7 @@
 ---
 title: Le Filet mignon Miel et Coriandre
 category: Plats
+subtitle: 'avec du gingembre, du beurre & de l''huile d''olive'
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: 15 min

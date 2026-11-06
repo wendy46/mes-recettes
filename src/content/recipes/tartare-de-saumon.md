@@ -1,6 +1,7 @@
 ---
 title: Tartare de saumon
 category: Entrées
+subtitle: 'avec de l''avocat, du citron & de la chantilly'
 date_added: '2026-08-18'
 servings: 8 personnes
 notes: 'Source : La maison du Bassin | Note : 4/5 | 25 min | Temps de repos : 3 jours'

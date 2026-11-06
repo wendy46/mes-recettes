@@ -1,6 +1,7 @@
 ---
 title: Curry Indien
 category: Plats
+subtitle: 'avec de l''agneau, de la cannelle & du cumin'
 date_added: '2026-08-18'
 servings: 8/10 personnes
 notes: 'Source : Maman | Note : 4/5 | 45 min'

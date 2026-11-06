@@ -1,6 +1,7 @@
 ---
 title: Lasagnes végétariennes
 category: Plats
+subtitle: 'avec des poireaux, des épinards & de la burrata'
 date_added: '2026-08-18'
 servings: 6 personnes
 notes: 'Source : [*https://www.missmaggieskitchen.com/plats/2017/6/20/lasagnes-poireaux-epinards*](https://www.missmaggieskitchen.com/plats/2017/6/20/lasagnes-poireaux-epinards) | Note : 4/5 | 40 min'

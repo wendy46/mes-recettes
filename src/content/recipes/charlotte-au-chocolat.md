@@ -1,6 +1,7 @@
 ---
 title: Charlotte au Chocolat
 category: Desserts
+subtitle: 'avec des biscuits à la cuiller & des marrons'
 date_added: '2026-08-18'
 servings: 6 personnes
 notes: 'Source : Françoise Bernard | Note : 4/5 | 30 min'

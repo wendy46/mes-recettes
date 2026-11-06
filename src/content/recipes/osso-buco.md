@@ -1,6 +1,7 @@
 ---
 title: Osso-Buco
 category: Plats
+subtitle: 'avec du vin blanc, des tomates & du bouquet garni'
 date_added: '2026-08-18'
 servings: 4 personnes
 notes: 'Source : Françoise Bernard | Note : 5/5 | 1h 30min'

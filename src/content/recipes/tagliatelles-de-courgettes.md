@@ -1,6 +1,7 @@
 ---
 title: Tagliatelles de Courgettes
 category: Plats
+subtitle: 'avec de l''ail, des tomates cerises & de l''ananas'
 date_added: '2026-08-18'
 servings: 2 personnes
 notes: 'Note : 3/5 | 10 min'
