@@ -674,7 +674,7 @@ main {
 
 .recipe-card-subtitle {
   margin: 0 0 0.9rem;
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   line-height: 1.4;
   color: var(--color-text-muted);
 }
