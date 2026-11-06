@@ -4,6 +4,7 @@ category: Desserts
 subtitle: 'avec du mascarpone, du café & des boudoirs'
 date_added: '2026-08-18'
 servings: 10 personnes
+prep_time: '~ 30 min'
 notes: 'Source : Brubru | Note : 4/5 | 30 min | Temps de repos : 12 h'
 source: 'Brubru'
 ingredients:

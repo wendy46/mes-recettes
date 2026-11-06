@@ -4,6 +4,7 @@ category: Entrées
 subtitle: 'avec de la coriandre & des fleurs de bourrache'
 date_added: '2026-08-18'
 servings: 8/10 personnes
+prep_time: '~ 20 min'
 notes: 'Source : Peter van Dijk (wine pairing Amsterdam) | Note : 5/5 | 25 min'
 source: 'Peter van Dijk (wine pairing Amsterdam)'
 ingredients:

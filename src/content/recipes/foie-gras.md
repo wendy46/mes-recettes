@@ -4,6 +4,8 @@ category: Entrées
 subtitle: 'avec de l''Armagnac, de la muscade & des 4 épices'
 date_added: '2026-08-18'
 servings: 8 personnes
+prep_time: '~ 25 min'
+cook_time: '~ 45 min'
 notes: 'Source : Maman | Note : 4/5 | 25 min | Temps de repos : 3 jours'
 source: 'Maman'
 ingredients:

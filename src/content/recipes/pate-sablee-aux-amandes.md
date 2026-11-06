@@ -4,6 +4,7 @@ category: Préparations
 subtitle: 'avec du sucre glace & de la vanille'
 date_added: '2026-08-18'
 servings: 6/8 personnes
+prep_time: '~ 25 min'
 notes: 'Note : 4/5 | 25 min | Temps de repos : 3 jours'
 ingredients:
 - 200 g de farine

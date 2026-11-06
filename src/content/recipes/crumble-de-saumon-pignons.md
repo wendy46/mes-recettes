@@ -4,6 +4,8 @@ category: Plats
 subtitle: 'avec de la crème, du basilic & des baies roses'
 date_added: '2026-08-18'
 servings: 4 personnes
+prep_time: '~ 20 min'
+cook_time: '~ 25 min'
 notes: 'Source : annabel (Marie) | Note : 4/5 | 15 min'
 source: 'annabel (Marie)'
 ingredients:

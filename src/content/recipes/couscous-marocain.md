@@ -4,6 +4,7 @@ category: Plats
 subtitle: 'avec du poulet, des légumes & du ras el hanout'
 date_added: '2026-08-18'
 servings: 6 personnes
+prep_time: '~ 40 min'
 cook_time: 1h
 notes: 'Source : Essaouira | Note : 5/5'
 source: 'Essaouira'

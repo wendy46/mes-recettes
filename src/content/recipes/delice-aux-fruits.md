@@ -4,6 +4,8 @@ category: Desserts
 subtitle: 'avec des coulis framboise & fruits de la passion'
 date_added: '2026-08-18'
 servings: 8 personnes
+prep_time: '~ 45 min'
+cook_time: '~ 10 min'
 notes: 'Source : Marmiton | Note : 4/5 | 40 min | Temps de repos : 12 h'
 source: 'Marmiton'
 ingredients:

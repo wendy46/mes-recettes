@@ -4,6 +4,8 @@ category: Desserts
 subtitle: 'avec des biscuits à la cuiller & des marrons'
 date_added: '2026-08-18'
 servings: 6 personnes
+prep_time: '~ 30 min'
+cook_time: '~ 10 min'
 notes: 'Source : Françoise Bernard | Note : 4/5 | 30 min'
 source: 'Françoise Bernard'
 ingredients:

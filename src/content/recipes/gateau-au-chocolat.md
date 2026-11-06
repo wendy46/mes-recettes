@@ -4,6 +4,8 @@ category: Desserts
 subtitle: 'avec de la poudre d''amandes & du cacao'
 date_added: '2026-08-18'
 servings: 8 personnes
+prep_time: '~ 15 min'
+cook_time: '~ 20 min'
 notes: 'Source : Caro | Note : 4/5 | 15 min'
 source: 'Caro'
 ingredients:

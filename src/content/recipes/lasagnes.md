@@ -4,6 +4,8 @@ category: Plats
 subtitle: 'avec des steaks hachés, du parmesan & du basilic'
 date_added: '2026-08-18'
 servings: 8/10 personnes
+prep_time: '~ 30 min'
+cook_time: '~ 2 h 45'
 notes: 'Source : Maman | Note : 4/5 | 45 min'
 source: 'Maman'
 ingredients:

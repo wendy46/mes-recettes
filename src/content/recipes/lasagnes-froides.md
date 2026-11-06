@@ -5,6 +5,7 @@ subtitle: 'avec de la ricotta, de la coppa & du pesto'
 date_added: '2026-08-22'
 servings: 6 personnes
 prep_time: 40 min
+cook_time: '~ 15 min'
 notes: 'Source : Instagram (accroauresto) | Note : 4/5'
 source: 'Instagram (accroauresto)'
 ingredients:

@@ -4,6 +4,7 @@ category: Plats
 subtitle: 'avec des morilles, des échalotes & de la crème'
 date_added: '2026-08-18'
 servings: 6 personnes
+prep_time: '~ 30 min'
 cook_time: 1h
 notes: 'Source : Maman | Note : 5/5'
 source: 'Maman'

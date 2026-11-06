@@ -4,6 +4,8 @@ category: Plats
 subtitle: 'avec du curry, de la poudre d''amande & du parmesan'
 date_added: '2026-08-18'
 servings: 6/8 personnes
+prep_time: '~ 20 min'
+cook_time: '~ 35 min'
 notes: 'Source : lescroquesmadame (instagram) | Note : 4/5 | 15 min'
 source: 'lescroquesmadame (instagram)'
 ingredients:

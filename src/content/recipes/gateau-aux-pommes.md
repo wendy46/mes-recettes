@@ -4,6 +4,8 @@ category: Desserts
 subtitle: 'avec de la vanille & du beurre fondu'
 date_added: '2026-08-18'
 servings: 8 personnes
+prep_time: '~ 20 min'
+cook_time: '~ 40 min'
 notes: 'Source : Marie-Aline | Note : 4/5 | 20 min'
 source: 'Marie-Aline'
 ingredients:

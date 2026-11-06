@@ -4,6 +4,8 @@ category: Desserts
 subtitle: 'avec une crème moka & de l''extrait de café'
 date_added: '2026-08-18'
 servings: 8 personnes
+prep_time: '~ 45 min'
+cook_time: '~ 10 min'
 notes: 'Source : Mimi | Note : 3/5 | 30 min'
 source: 'Mimi'
 ingredients:

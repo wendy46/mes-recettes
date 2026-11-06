@@ -4,6 +4,8 @@ category: Plats
 subtitle: 'avec de l''ail, des tomates cerises & de l''ananas'
 date_added: '2026-08-18'
 servings: 2 personnes
+prep_time: '~ 15 min'
+cook_time: '~ 10 min'
 notes: 'Note : 3/5 | 10 min'
 ingredients:
 - huile d’olive

@@ -4,6 +4,8 @@ category: Plats
 subtitle: 'avec du vinaigre balsamique, de la cannelle & du thym'
 date_added: '2026-08-18'
 servings: 4/6 personnes
+prep_time: '~ 15 min'
+cook_time: '~ 35 min'
 notes: 'Source : Marie | Note : 4/5 | 20 min'
 source: 'Marie'
 ingredients:

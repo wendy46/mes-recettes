@@ -4,6 +4,7 @@ category: Plats
 subtitle: 'avec du céleri-rave, des carottes & de l''ail'
 date_added: '2026-08-18'
 servings: 4-6 personnes
+prep_time: '~ 30 min'
 cook_time: 7h
 notes: 'Source : Ottolenghi | Note : 5/5 | Temps de repos : 12h'
 source: 'Ottolenghi'

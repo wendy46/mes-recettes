@@ -4,6 +4,7 @@ category: Plats
 subtitle: 'avec du thon, des anchois & des câpres'
 date_added: '2026-08-21'
 servings: 6 personnes
+prep_time: '~ 30 min'
 cook_time: 1h
 notes: 'Source : thewaywewantt (instagram) | Note : 5/5'
 source: 'thewaywewantt (instagram)'

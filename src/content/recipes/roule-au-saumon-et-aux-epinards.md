@@ -4,6 +4,8 @@ category: Entrées
 subtitle: 'avec du Boursin & de la ciboulette'
 date_added: '2026-08-18'
 servings: 4/8 personnes
+prep_time: '~ 25 min'
+cook_time: '~ 20 min'
 notes: 'Source : internet | Note : 5/5 | 45 min | Temps de repos : 1 heure'
 source: 'internet'
 ingredients:

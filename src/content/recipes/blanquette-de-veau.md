@@ -4,6 +4,8 @@ category: Plats
 subtitle: 'avec des carottes, des champignons & du bouquet garni'
 date_added: '2026-08-18'
 servings: 4 personnes
+prep_time: '~ 30 min'
+cook_time: '~ 1 h 30'
 notes: 'Source : Françoise Bernard | Note : 4/5 | 1h 30min'
 source: 'Françoise Bernard'
 ingredients:

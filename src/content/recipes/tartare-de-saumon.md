@@ -4,6 +4,7 @@ category: Entrées
 subtitle: 'avec de l''avocat, du citron & de la chantilly'
 date_added: '2026-08-18'
 servings: 8 personnes
+prep_time: '~ 25 min'
 notes: 'Source : La maison du Bassin | Note : 4/5 | 25 min | Temps de repos : 3 jours'
 source: 'La maison du Bassin'
 ingredients:

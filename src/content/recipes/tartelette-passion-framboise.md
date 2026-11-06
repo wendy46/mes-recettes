@@ -4,6 +4,8 @@ category: Desserts
 subtitle: 'avec des groseilles & de la noix de coco'
 date_added: '2026-08-18'
 servings: 6/8 personnes
+prep_time: '~ 45 min'
+cook_time: '~ 15 min'
 notes: 'Source : *https://www.meilleurduchef.com/fr/recette/tartelette-passion-framboise.html* | Note : 4/5 | 2 h (à commencer la veille)'
 source: 'https://www.meilleurduchef.com/fr/recette/tartelette-passion-framboise.html'
 ingredients:

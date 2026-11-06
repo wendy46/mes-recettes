@@ -4,6 +4,7 @@ category: Entrées
 subtitle: 'à l''aneth, au citron & au thé earl grey'
 date_added: '2026-08-18'
 servings: 8 personnes
+prep_time: '~ 20 min'
 notes: 'Source : Marie | Note : 5/5 | 25 min | Temps de repos : 3 jours'
 source: 'Marie'
 ingredients:
