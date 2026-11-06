@@ -396,8 +396,8 @@ main {
 
 /* Smaller than the badges used elsewhere so they don't hide the photo. */
 .photo-badges .badge {
-  padding: 0.18rem 0.55rem;
-  font-size: 0.7rem;
+  padding: 0.24rem 0.65rem;
+  font-size: 0.78rem;
   line-height: 1.2;
 }
 
