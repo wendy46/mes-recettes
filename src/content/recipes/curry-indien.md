@@ -2,7 +2,7 @@
 title: Curry Indien
 category: Plats
 subtitle: 'avec de l''agneau, de la cannelle & du cumin'
-tags: [viande, mijote]
+tags: [viande, mijote, curry]
 date_added: '2026-08-18'
 servings: 8/10 personnes
 prep_time: '~ 40 min'

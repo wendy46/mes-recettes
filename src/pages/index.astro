@@ -4,6 +4,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import RecipeCard from "../components/RecipeCard.astro";
 import { getRecipeImage } from "../utils/images";
 import { ICONS } from "../lib/icons";
+import { TAG_LABELS } from "../lib/subtags";
 
 const recipes = await getCollection("recipes");
 const byDateDesc = [...recipes].sort(
@@ -13,7 +14,7 @@ const byDateDesc = [...recipes].sort(
 const featured = byDateDesc[0];
 const teasers = byDateDesc.slice(1, 4);
 
-const { title, category, servings, prep_time, cook_time, image } = featured.data;
+const { title, category, servings, prep_time, cook_time, image, tags } = featured.data;
 const featuredImage = getRecipeImage(featured.slug, category, image);
 
 // Split the recipe title into a coral-accented first chunk and a dark
@@ -50,7 +51,12 @@ const titleRest = titleWords.slice(accentWordCount).join(" ");
       </div>
       <a class="hero-media" href={`/recettes/${featured.slug}/`} aria-label={`Voir la recette ${title}`}>
         <img src={featuredImage} alt={title} />
-        <span class="badge hero-media-badge">{category}</span>
+        <div class="photo-badges">
+          <span class="badge">{category}</span>
+          {tags.filter((tag) => TAG_LABELS[tag]).map((tag) => (
+            <span class="badge badge-sub">{TAG_LABELS[tag]}</span>
+          ))}
+        </div>
       </a>
     </div>
   </section>

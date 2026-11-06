@@ -1,6 +1,6 @@
 ---
 title: Salade pdt tapées & thon
-category: Plats
+category: Tartes & Salades
 subtitle: 'avec des œufs, de l''oignon rouge & du yaourt grec'
 tags: [poisson]
 date_added: '2026-08-20'

@@ -2,7 +2,7 @@
 title: Tagliatelles de Courgettes
 category: Plats
 subtitle: 'avec des crevettes, du curry & du lait de coco'
-tags: [poisson, rapide]
+tags: [poisson, rapide, curry]
 date_added: '2026-08-18'
 servings: '~ 4 personnes'
 prep_time: '~ 15 min'

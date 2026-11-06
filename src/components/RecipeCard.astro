@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { getRecipeImage } from "../utils/images";
 import { ICONS } from "../lib/icons";
+import { TAG_LABELS } from "../lib/subtags";
 
 interface Props {
   recipe: CollectionEntry<"recipes">;
@@ -27,7 +28,12 @@ const people = servings?.replace(/\bpersonnes?\b/i, "pers.");
 >
   <div class="recipe-card-media">
     <img src={imgSrc} alt={title} loading="lazy" />
-    <span class="badge recipe-card-badge">{category}</span>
+    <div class="photo-badges">
+      <span class="badge">{category}</span>
+      {tags.filter((tag) => TAG_LABELS[tag]).map((tag) => (
+        <span class="badge badge-sub">{TAG_LABELS[tag]}</span>
+      ))}
+    </div>
   </div>
   <div class="recipe-card-body">
     <h3>{title}</h3>

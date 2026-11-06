@@ -28,6 +28,7 @@ export const SUBTAGS: Record<string, SubTag[]> = {
     { id: "mijote", label: "Mijoté" },
     { id: "rapide", label: "Rapide" },
     { id: "froid", label: "Froid" },
+    { id: "curry", label: "Curry" },
   ],
   "Desserts": [
     { id: "chocolat", label: "Chocolat" },
@@ -38,3 +39,10 @@ export const SUBTAGS: Record<string, SubTag[]> = {
   ],
   "Préparations": [],
 };
+
+// id -> label, used for the tags shown on recipe photos.
+export const TAG_LABELS: Record<string, string> = Object.fromEntries(
+  Object.values(SUBTAGS)
+    .flat()
+    .map((tag) => [tag.id, tag.label])
+);
