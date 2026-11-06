@@ -2,6 +2,7 @@
 title: Gâteau aux Pommes
 category: Desserts
 subtitle: 'avec de la vanille & du beurre fondu'
+tags: [fruits, gateau]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: '~ 20 min'

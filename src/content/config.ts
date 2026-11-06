@@ -6,6 +6,7 @@ const recipes = defineCollection({
     title: z.string(),
     category: z.enum(['Entrées', 'Tartes & Salades', 'Plats', 'Desserts', 'Préparations']),
     subtitle: z.string().optional(),
+    tags: z.array(z.string()).default([]),
     servings: z.string().optional(),
     prep_time: z.string().optional(),
     cook_time: z.string().optional(),

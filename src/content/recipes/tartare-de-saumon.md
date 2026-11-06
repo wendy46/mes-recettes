@@ -2,6 +2,7 @@
 title: Tartare de saumon
 category: Entrées
 subtitle: 'avec de l''avocat, du citron & de la chantilly'
+tags: [poisson, froid]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: '~ 25 min'

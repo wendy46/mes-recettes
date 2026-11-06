@@ -2,6 +2,7 @@
 title: Pintade aux pêches et au cidre
 category: Plats
 subtitle: 'avec des noix, du calvados & du beurre'
+tags: [viande]
 date_added: '2026-11-06T12:30:00'
 servings: 4 personnes
 prep_time: 25 min

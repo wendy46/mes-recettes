@@ -2,6 +2,7 @@
 title: Roulé au saumon et aux épinards
 category: Entrées
 subtitle: 'avec du Boursin & de la ciboulette'
+tags: [poisson, froid]
 date_added: '2026-08-18'
 servings: 4/8 personnes
 prep_time: '~ 25 min'

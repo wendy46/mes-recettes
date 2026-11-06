@@ -2,6 +2,7 @@
 title: Curry de poulet aux poivrons
 category: Plats
 subtitle: 'avec du gingembre, des amandes effilées & du cumin'
+tags: [viande, mijote]
 date_added: '2026-08-18'
 servings: 4 personnes
 prep_time: 40 min

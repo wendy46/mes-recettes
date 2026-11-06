@@ -2,6 +2,7 @@
 title: Lasagnes
 category: Plats
 subtitle: 'avec des steaks hachés, du parmesan & du basilic'
+tags: [viande, mijote]
 date_added: '2026-08-18'
 servings: 8/10 personnes
 prep_time: '~ 30 min'

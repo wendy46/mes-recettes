@@ -2,6 +2,7 @@
 title: Tiramisu au Safran et eau de rose
 category: Desserts
 subtitle: 'avec du thé earl grey, de la vanille & des pistaches'
+tags: [cremeux]
 date_added: '2026-08-18'
 servings: 8/10 personnes
 prep_time: '~ 30 min'

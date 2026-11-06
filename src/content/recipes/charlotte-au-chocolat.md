@@ -2,6 +2,7 @@
 title: Charlotte au Chocolat
 category: Desserts
 subtitle: 'avec des biscuits à la cuiller & des marrons'
+tags: [chocolat, cremeux]
 date_added: '2026-08-18'
 servings: 6 personnes
 prep_time: '~ 30 min'

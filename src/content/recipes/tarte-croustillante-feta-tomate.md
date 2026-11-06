@@ -2,6 +2,7 @@
 title: Tarte croustillante féta & tomate
 category: Tartes & Salades
 subtitle: 'avec du filo, de la mozzarella & du miel'
+tags: [vegetarien]
 date_added: '2026-08-22T12:00:00'
 servings: 6 personnes (une tarte)
 prep_time: 30 min

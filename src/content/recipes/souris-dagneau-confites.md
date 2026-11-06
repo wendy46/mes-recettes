@@ -2,6 +2,7 @@
 title: Souris d’agneau confites
 category: Plats
 subtitle: 'avec des oignons nouveaux, du cumin & du miel'
+tags: [viande, mijote]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: 25 min

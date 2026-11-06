@@ -2,6 +2,7 @@
 title: Flan pâtissier
 category: Desserts
 subtitle: 'avec de la vanille & un feuilletage inversé'
+tags: [cremeux, gateau]
 date_added: '2026-11-06T12:00:00'
 servings: '~ 8 personnes'
 prep_time: '~ 2 h'

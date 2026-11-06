@@ -2,6 +2,7 @@
 title: Blanquette de veau
 category: Plats
 subtitle: 'avec des carottes, des champignons & du bouquet garni'
+tags: [viande, mijote]
 date_added: '2026-08-18'
 servings: 4 personnes
 prep_time: '~ 30 min'

@@ -2,6 +2,7 @@
 title: Ceviche aux agrumes
 category: Entrées
 subtitle: 'avec de la coriandre & des fleurs de bourrache'
+tags: [poisson, froid]
 date_added: '2026-08-18'
 servings: 8/10 personnes
 prep_time: '~ 20 min'

@@ -2,6 +2,7 @@
 title: Foie Gras
 category: Entrées
 subtitle: 'avec de l''Armagnac, de la muscade & des 4 épices'
+tags: [fetes, froid]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: '~ 25 min'

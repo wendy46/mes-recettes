@@ -2,6 +2,7 @@
 title: Délice aux fruits
 category: Desserts
 subtitle: 'avec des coulis framboise & fruits de la passion'
+tags: [fruits, cremeux]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: '~ 45 min'

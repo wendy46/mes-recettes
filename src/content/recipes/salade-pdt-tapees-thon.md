@@ -2,6 +2,7 @@
 title: Salade pdt tapées & thon
 category: Plats
 subtitle: 'avec des œufs, de l''oignon rouge & du yaourt grec'
+tags: [poisson]
 date_added: '2026-08-20'
 servings: 4 personnes
 prep_time: 20 minutes

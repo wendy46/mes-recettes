@@ -2,6 +2,7 @@
 title: Tartelette passion - framboise
 category: Desserts
 subtitle: 'avec des groseilles & de la noix de coco'
+tags: [fruits, gateau]
 date_added: '2026-08-18'
 servings: 6/8 personnes
 prep_time: '~ 45 min'

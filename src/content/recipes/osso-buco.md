@@ -2,6 +2,7 @@
 title: Osso-Buco
 category: Plats
 subtitle: 'avec du vin blanc, des tomates & du bouquet garni'
+tags: [viande, mijote]
 date_added: '2026-08-18'
 servings: 4 personnes
 prep_time: '~ 20 min'

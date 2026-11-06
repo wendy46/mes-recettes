@@ -2,6 +2,7 @@
 title: Gâteau au chocolat
 category: Desserts
 subtitle: 'avec de la poudre d''amandes & du cacao'
+tags: [chocolat, gateau]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: '~ 15 min'

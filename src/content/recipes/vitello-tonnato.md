@@ -2,6 +2,7 @@
 title: Vitello tonnato
 category: Plats
 subtitle: 'avec du thon, des anchois & des câpres'
+tags: [viande, froid]
 date_added: '2026-08-21'
 servings: 6 personnes
 prep_time: '~ 30 min'

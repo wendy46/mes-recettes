@@ -2,6 +2,7 @@
 title: Pâte sablée aux amandes
 category: Préparations
 subtitle: 'avec du sucre glace & de la vanille'
+tags: []
 date_added: '2026-08-18'
 servings: 6/8 personnes
 prep_time: '~ 25 min'

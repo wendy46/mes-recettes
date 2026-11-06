@@ -2,6 +2,7 @@
 title: Buche Mimi
 category: Desserts
 subtitle: 'avec une crème moka & de l''extrait de café'
+tags: [fetes, gateau]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: '~ 45 min'

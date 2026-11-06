@@ -2,6 +2,7 @@
 title: Tiramisu
 category: Desserts
 subtitle: 'avec du mascarpone, du café & des boudoirs'
+tags: [cremeux]
 date_added: '2026-08-18'
 servings: 10 personnes
 prep_time: '~ 30 min'

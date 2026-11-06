@@ -457,6 +457,34 @@ main {
   background: var(--color-ink-soft);
 }
 
+/* `display` on .pill would otherwise win over the [hidden] attribute. */
+.pill[hidden],
+.subpill-group[hidden] {
+  display: none;
+}
+
+/* Sub-tags sit inline right after the open main category. */
+.subpill-group {
+  display: contents;
+}
+
+.pill-sub {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+}
+
+.pill-sub.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.pill-sub.active:hover {
+  background: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
 .pill-icon {
   display: inline-flex;
   width: 1rem;

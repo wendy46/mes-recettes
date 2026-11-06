@@ -2,6 +2,7 @@
 title: Pain de poisson
 category: Plats
 subtitle: 'avec du saumon, des crevettes & de l''estragon'
+tags: [poisson]
 date_added: '2026-08-18'
 servings: 6/8  personnes
 prep_time: 50 min

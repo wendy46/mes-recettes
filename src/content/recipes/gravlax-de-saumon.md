@@ -2,6 +2,7 @@
 title: Gravlax de saumon
 category: Entrées
 subtitle: 'à l''aneth, au citron & au thé earl grey'
+tags: [poisson, froid, fetes]
 date_added: '2026-08-18'
 servings: 8 personnes
 prep_time: '~ 20 min'

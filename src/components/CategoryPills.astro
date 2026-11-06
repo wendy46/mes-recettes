@@ -1,8 +1,11 @@
 ---
 import { ICONS } from "../lib/icons";
+import { SUBTAGS } from "../lib/subtags";
 
+// No "Toutes" pill: with nothing selected every recipe is shown. Clicking a
+// main category hides the others and reveals its sub-tags; clicking the same
+// category again brings the main categories back.
 const categories = [
-  { key: "all", label: "Toutes", icon: ICONS.all },
   { key: "Entrées", label: "Entrées", icon: ICONS.entrees },
   { key: "Tartes & Salades", label: "Tartes & Salades", icon: ICONS.tartesSalades },
   { key: "Plats", label: "Plats", icon: ICONS.plats },
@@ -13,14 +16,28 @@ const categories = [
 
 <div class="category-pills" role="group" aria-label="Filtrer par catégorie">
   {categories.map((cat) => (
-    <button
-      type="button"
-      class={`pill ${cat.key === "all" ? "active" : ""}`}
-      data-category-pill={cat.key}
-      aria-pressed={cat.key === "all" ? "true" : "false"}
-    >
-      <span class="pill-icon" set:html={cat.icon} />
-      <span>{cat.label}</span>
-    </button>
+    <>
+      <button
+        type="button"
+        class="pill"
+        data-category-pill={cat.key}
+        aria-pressed="false"
+      >
+        <span class="pill-icon" set:html={cat.icon} />
+        <span>{cat.label}</span>
+      </button>
+      <div class="subpill-group" data-subpills-for={cat.key} hidden>
+        {(SUBTAGS[cat.key] ?? []).map((tag) => (
+          <button
+            type="button"
+            class="pill pill-sub"
+            data-subtag-pill={tag.id}
+            aria-pressed="false"
+          >
+            {tag.label}
+          </button>
+        ))}
+      </div>
+    </>
   ))}
 </div>

@@ -2,6 +2,7 @@
 title: Pizza au pesto, courgette et pêche
 category: Tartes & Salades
 subtitle: 'avec de la mozzarella, du basilic & du miel'
+tags: [vegetarien, rapide]
 date_added: '2026-08-18'
 servings: 4 personnes
 prep_time: 20 min

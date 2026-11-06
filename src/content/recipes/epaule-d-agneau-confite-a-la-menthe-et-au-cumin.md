@@ -2,6 +2,7 @@
 title: Épaule d'agneau confite à la menthe et au cumin
 category: Plats
 subtitle: 'avec du céleri-rave, des carottes & de l''ail'
+tags: [viande, mijote]
 date_added: '2026-08-18'
 servings: 4-6 personnes
 prep_time: '~ 30 min'

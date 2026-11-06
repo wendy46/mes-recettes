@@ -2,6 +2,7 @@
 title: Saumon au pesto rouge
 category: Plats
 subtitle: 'avec du Petit Billy, du parmesan & des olives noires'
+tags: [poisson, rapide]
 date_added: '2026-08-18'
 servings: 12 personnes
 prep_time: 10 min

@@ -56,12 +56,15 @@ const recipes = (await getCollection("recipes")).sort(
   const emptyMessage = document.getElementById("search-empty");
   const grid = document.getElementById("recipe-grid");
   const pills = Array.from(document.querySelectorAll<HTMLElement>("[data-category-pill]"));
+  const subGroups = Array.from(document.querySelectorAll<HTMLElement>("[data-subpills-for]"));
   const cards = Array.from(document.querySelectorAll<HTMLElement>(".recipe-card"));
 
   // Same category order as the filter pills, used to group the "Catégorie" sort.
   const categoryOrder = ["Entrées", "Tartes & Salades", "Plats", "Desserts", "Préparations"];
 
-  let activeCategory = "all";
+  // No category selected = every recipe is shown (there is no "Toutes" pill).
+  let activeCategory: string | null = null;
+  let activeSubtag: string | null = null;
   let activeSort = "date";
 
   function sortCards(list: HTMLElement[]) {
@@ -93,9 +96,11 @@ const recipes = (await getCollection("recipes")).sort(
       const title = card.dataset.title || "";
       const ingredientsText = card.dataset.ingredients || "";
       const category = card.dataset.category || "";
-      const matchesCategory = activeCategory === "all" || category === activeCategory;
+      const tags = (card.dataset.tags || "").split(" ").filter(Boolean);
+      const matchesCategory = !activeCategory || category === activeCategory;
+      const matchesSubtag = !activeSubtag || tags.includes(activeSubtag);
       const matchesQuery = !query || title.includes(query) || ingredientsText.includes(query);
-      const show = matchesCategory && matchesQuery;
+      const show = matchesCategory && matchesSubtag && matchesQuery;
       card.style.display = show ? "" : "none";
       if (show) visibleCount++;
     });
@@ -105,15 +110,59 @@ const recipes = (await getCollection("recipes")).sort(
     }
   }
 
+  // Shows the chosen main category alone with its sub-tags, or all the main
+  // categories when none is chosen. A sub-tag only appears if a recipe of the
+  // category uses it, and the sub-tag row is skipped if fewer than two remain.
+  function refreshPills() {
+    pills.forEach((pill) => {
+      const isActive = pill.dataset.categoryPill === activeCategory;
+      pill.hidden = activeCategory !== null && !isActive;
+      pill.classList.toggle("active", isActive);
+      pill.setAttribute("aria-pressed", String(isActive));
+    });
+
+    subGroups.forEach((group) => {
+      if (group.dataset.subpillsFor !== activeCategory) {
+        group.hidden = true;
+        return;
+      }
+      const available = new Set<string>();
+      cards
+        .filter((card) => card.dataset.category === activeCategory)
+        .forEach((card) => {
+          (card.dataset.tags || "").split(" ").filter(Boolean).forEach((tag) => available.add(tag));
+        });
+
+      let shown = 0;
+      group.querySelectorAll<HTMLElement>("[data-subtag-pill]").forEach((subPill) => {
+        const id = subPill.dataset.subtagPill || "";
+        const usable = available.has(id);
+        subPill.hidden = !usable;
+        if (usable) shown++;
+        const isOn = id === activeSubtag;
+        subPill.classList.toggle("active", isOn);
+        subPill.setAttribute("aria-pressed", String(isOn));
+      });
+      group.hidden = shown < 2;
+    });
+  }
+
   pills.forEach((pill) => {
     pill.addEventListener("click", () => {
-      pills.forEach((p) => {
-        p.classList.remove("active");
-        p.setAttribute("aria-pressed", "false");
-      });
-      pill.classList.add("active");
-      pill.setAttribute("aria-pressed", "true");
-      activeCategory = pill.dataset.categoryPill || "all";
+      const key = pill.dataset.categoryPill || null;
+      // Clicking the open category again closes it and restores the main pills.
+      activeCategory = activeCategory === key ? null : key;
+      activeSubtag = null;
+      refreshPills();
+      applyFilters();
+    });
+  });
+
+  document.querySelectorAll<HTMLElement>("[data-subtag-pill]").forEach((subPill) => {
+    subPill.addEventListener("click", () => {
+      const id = subPill.dataset.subtagPill || null;
+      activeSubtag = activeSubtag === id ? null : id;
+      refreshPills();
       applyFilters();
     });
   });
@@ -184,5 +233,6 @@ const recipes = (await getCollection("recipes")).sort(
     input.value = initialQuery;
   }
 
+  refreshPills();
   applyFilters();
 </script>

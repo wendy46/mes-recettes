@@ -2,6 +2,7 @@
 title: Couscous marocain
 category: Plats
 subtitle: 'avec du poulet, des légumes & du ras el hanout'
+tags: [viande, mijote]
 date_added: '2026-08-18'
 servings: 6 personnes
 prep_time: '~ 40 min'

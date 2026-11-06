@@ -2,6 +2,7 @@
 title: Pulled pork
 category: Plats
 subtitle: 'sauce BBQ, ketchup & oignons'
+tags: [viande, mijote]
 date_added: '2026-11-06T13:00:00'
 servings: 4 à 6 personnes
 prep_time: 10 min

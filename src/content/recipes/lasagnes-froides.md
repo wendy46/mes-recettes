@@ -2,6 +2,7 @@
 title: Lasagnes froides
 category: Plats
 subtitle: 'avec de la ricotta, de la coppa & du pesto'
+tags: [viande, froid]
 date_added: '2026-08-22'
 servings: 6 personnes
 prep_time: 40 min

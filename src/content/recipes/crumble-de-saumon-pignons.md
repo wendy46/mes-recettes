@@ -2,6 +2,7 @@
 title: Crumble de saumon pignons
 category: Plats
 subtitle: 'avec de la crème, du basilic & des baies roses'
+tags: [poisson, rapide]
 date_added: '2026-08-18'
 servings: 4 personnes
 prep_time: '~ 20 min'

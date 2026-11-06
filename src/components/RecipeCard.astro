@@ -8,7 +8,7 @@ interface Props {
 }
 
 const { recipe } = Astro.props;
-const { title, subtitle, category, servings, prep_time, cook_time, image, date_added, ingredients } = recipe.data;
+const { title, subtitle, category, servings, prep_time, cook_time, image, date_added, ingredients, tags } = recipe.data;
 const imgSrc = getRecipeImage(recipe.slug, category, image);
 
 // Compact meta line: prep time (or cook time when no prep time is given) + servings.
@@ -22,6 +22,7 @@ const people = servings?.replace(/\bpersonnes?\b/i, "pers.");
   data-title={title.toLowerCase()}
   data-ingredients={ingredients.join(" ").toLowerCase()}
   data-category={category}
+  data-tags={tags.join(" ")}
   data-date={date_added.getTime()}
 >
   <div class="recipe-card-media">

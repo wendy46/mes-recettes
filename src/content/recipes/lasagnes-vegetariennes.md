@@ -2,6 +2,7 @@
 title: Lasagnes végétariennes
 category: Plats
 subtitle: 'avec des poireaux, des épinards & de la burrata'
+tags: [vegetarien]
 date_added: '2026-08-18'
 servings: 6 personnes
 prep_time: '~ 30 min'
